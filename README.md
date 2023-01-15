@@ -20,6 +20,26 @@
 4. Madhukar Kakade
 5. Ruchi Priya Kumari
 
+## Folder Structure 📂
+
+- src 📂
+  - Components 📂
+     - CommonComponents.js
+     - Navbar.js
+
+  - Pages 📂
+
+     - AdminPage (Inside This Only `Alal Uddin Will` Work Here)   
+
+     - Authentication (Inside This Only `Shubham Verma` Will Work Here)   
+
+     - LandingPage (Inside This Only `Ruchi Priya` Will Work Here)   
+
+     - Products (Inside This Only `Madhukar` Will Work Here)  
+
+     - Single (Inside This Only `Hari Singh` Will Work Here)  
+ 
+
 ## Task Divided 👍👍👍👍👍
 
 1. Landing page : 👍 (Ruchi Priya)
