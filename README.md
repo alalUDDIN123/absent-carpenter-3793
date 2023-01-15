@@ -13,7 +13,7 @@
 
 ## Task Divided 👍👍👍👍👍
 
-1. Visit the landing page : 👍 (Ruchi Priya)
+1. Landing page : 👍 (Ruchi Priya)
     - navbar 
     - nested navbar
     - hero section
