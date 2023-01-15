@@ -3,6 +3,15 @@
  - Project Code : absent-carpenter-3793
  - IA : Manoj Attri
 
+## Dependencies Installed 
+
+1. `npm i axios`
+2. `npm i react-router-dom`
+3. `npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+4. `npm i @chakra-ui/icons`
+5. `npm install react-icons --save`
+6. `npm i json-server`
+
 ### Let's have a meet with team members
 
 1. Alal Uddin 
