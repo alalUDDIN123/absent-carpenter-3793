@@ -11,6 +11,7 @@
 4. `npm i @chakra-ui/icons`
 5. `npm install react-icons --save`
 6. `npm i json-server`
+7. `npm i redux react-redux redux-thunk`
 
 ### Let's have a meet with team members
 

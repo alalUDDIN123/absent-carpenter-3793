@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Navbar() {
+function CartPage() {
   return (
     <div>
-      Navbar
+      Cart Page
     </div>
   )
 }
 
-export default Navbar
+export default CartPage
