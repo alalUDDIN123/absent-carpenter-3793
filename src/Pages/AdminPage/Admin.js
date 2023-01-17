@@ -4,7 +4,7 @@ function Admin() {
   return (
     <div>
       <div>
-        Left Side
+        Left Side start
       </div>
       <div>
         Right Side
