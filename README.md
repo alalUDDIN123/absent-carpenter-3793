@@ -13,6 +13,8 @@
 6. `npm i json-server`
 7. `npm i redux react-redux redux-thunk`
 8. `npm install react-icons --save`
+9. `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
+10. `npm install @mui/icons-material`
 
 
 
