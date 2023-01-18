@@ -16,6 +16,7 @@
 9. `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
 10. `npm install @mui/icons-material`
 11. `npm install chart.js`
+12. `npm i react-chartjs-2`
 
 
 
