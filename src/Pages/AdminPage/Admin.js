@@ -11,7 +11,11 @@ function Admin() {
     <>
       <div className={style["main-wrapper"]} >
         <div className={style["container-wrapper"]}>
-         <LeftSide />
+
+          {/* Left Side Bar Component */}
+          <LeftSide />
+
+          {/* Right Side bar */}
           <div>
             {/* Middle statics */}
             <div className={rightBarCss["middle-top"]} >

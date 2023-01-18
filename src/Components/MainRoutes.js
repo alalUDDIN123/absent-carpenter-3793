@@ -14,7 +14,7 @@ import Navbar from './Navbar'
 import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
-import Report from '../Pages/AdminPage/Report'
+
 
 function MainRoutes() {
     return (
