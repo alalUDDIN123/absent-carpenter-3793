@@ -13,6 +13,12 @@
 6. `npm i json-server`
 7. `npm i redux react-redux redux-thunk`
 
+
+
+## Day 2
+
+![](./Admin%20Panel%20Structure.png)
+
 ### Let's have a meet with team members
 
 1. Alal Uddin 
