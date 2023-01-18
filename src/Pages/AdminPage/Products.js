@@ -1,6 +1,22 @@
 import React from 'react'
 import LeftSide from './LeftSide'
 import style from "./admin.module.css"
+import CommonTop from './CommonTop'
+
+const sendToCommonTop=[
+  {
+    "title":"Total Products",
+    "value":50,
+  },
+  {
+    "title":"In Stock",
+    "value":10,
+  },
+  {
+    "title":"Out Of Stock",
+    "value":40,
+  }
+]
 
 function Products() {
   return (
@@ -12,7 +28,7 @@ function Products() {
 
           {/* Right Side bar */}
           <div>
-           all products
+             <CommonTop sendToCommonTop={sendToCommonTop}/>
           </div>
 
         </div>

@@ -1,6 +1,22 @@
 import React from 'react'
 import LeftSide from './LeftSide'
 import style from "./admin.module.css"
+import CommonTop from './CommonTop'
+
+const sendToCommonTop=[
+  {
+    "title":"Total Orders",
+    "value":50,
+  },
+  {
+    "title":"Pending",
+    "value":10,
+  },
+  {
+    "title":"Delivered",
+    "value":40,
+  }
+]
 
 function Orders() {
   return (
@@ -12,7 +28,7 @@ function Orders() {
 
           {/* Right Side bar */}
           <div>
-            Orders dashboard
+            <CommonTop sendToCommonTop={sendToCommonTop} />
           </div>
 
         </div>
@@ -22,3 +38,5 @@ function Orders() {
 }
 
 export default Orders
+
+// git push origin fp04_371_day_3

@@ -2,10 +2,24 @@
 import React from 'react'
 import style from "./admin.module.css"
 import Chart from './Chart'
+import CommonTop from './CommonTop'
 import rightBarCss from "./dashboardRightbar.module.css"
 import LeftSide from './LeftSide'
 
-
+const sendToCommonTop=[
+  {
+    "title":"Total Users",
+    "value":10,
+  },
+  {
+    "title":"Total Products",
+    "value":20,
+  },
+  {
+    "title":"Total Orders",
+    "value":50,
+  }
+]
 
 function Admin() {
 
@@ -22,7 +36,7 @@ function Admin() {
           {/* Right Side bar */}
           <div>
             {/* Middle statics */}
-            <div className={rightBarCss["middle-top"]} >
+            {/* <div className={rightBarCss["middle-top"]} >
               <div>
                 <h2>Total Users</h2>
                 <p>10</p>
@@ -42,7 +56,9 @@ function Admin() {
                 <h2>Sales Amount</h2>
                 <p>₹ 100,00.00</p>
               </div>
-            </div>
+            </div> */}
+
+            <CommonTop sendToCommonTop={sendToCommonTop} />
 
             {/* Middle Chart */}
             <div className={rightBarCss["middle-chart"]} >
