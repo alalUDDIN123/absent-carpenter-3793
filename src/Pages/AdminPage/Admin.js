@@ -1,11 +1,15 @@
+
 import React from 'react'
 import style from "./admin.module.css"
+import Chart from './Chart'
 import rightBarCss from "./dashboardRightbar.module.css"
 import LeftSide from './LeftSide'
 
 
 
 function Admin() {
+
+
 
   return (
     <>
@@ -42,7 +46,7 @@ function Admin() {
 
             {/* Middle Chart */}
             <div className={rightBarCss["middle-chart"]} >
-
+             <Chart />
             </div>
           </div>
 
