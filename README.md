@@ -14,6 +14,12 @@
 7. `npm i redux react-redux redux-thunk`
 8. `npm install react-icons --save`
 
+
+
+## Day 2
+
+![](./Admin%20Panel%20Structure.png)
+
 ### Let's have a meet with team members
 
 1. Alal Uddin 
