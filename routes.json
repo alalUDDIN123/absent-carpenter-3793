@@ -1,0 +1,10 @@
+{
+    "/products/phones": "/phones",
+    "/products/phones/:id": "/phones/:id",
+    "/products/laptops": "/laptops",
+    "/products/laptops/:id": "/laptops/:id",
+    "/products/television": "/television",
+    "/products/television/:id": "/television/:id"
+
+   
+}
