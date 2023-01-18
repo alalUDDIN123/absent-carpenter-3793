@@ -9,14 +9,30 @@ function Admin() {
         <div className={style["container-wrapper"]}>
 
           {/* Left Side Bar */}
-          <div>
-             <div>Logged User</div>
-             <div>Dashboard</div>
+          <div className={style["left-mainDiv"]}>
+             <div>
+
+               <div>
+                <img src="https://avatars.githubusercontent.com/u/103638279?s=120&v=4" alt="Logged User" />
+               </div>
+
+               <div>
+                 <h2>Shubham</h2>
+                 <p>shubham@gmail.com</p>
+               </div>
+
+             </div>
+
+             <div> 
+               Dasboard
+              </div>
+
              <div>Users</div>
              <div>Orders</div>
              <div>Products</div>
              <div>Add Product</div>
              <div>Logout</div>
+             <div>Report</div>
           </div>
            
            {/* Right Side bar */}
