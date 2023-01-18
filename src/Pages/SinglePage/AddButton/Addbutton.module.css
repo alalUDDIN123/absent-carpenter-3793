@@ -1,0 +1,13 @@
+.addstyle{
+    padding: 16px 30px;
+    width: 210px;;
+    color: white;
+    background-color: #ff9f00;
+    border: none;
+    border-radius: 2px;
+    margin: 5px;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
