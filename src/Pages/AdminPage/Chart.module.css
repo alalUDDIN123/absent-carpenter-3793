@@ -1,11 +1,13 @@
 .charts {
-   width: 90%;
-    background-color: white;
-    margin: auto;
-   
-  }
-  .card {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-bottom: 3px solid darkorange;
-  }
+  width: 85%;
+  background-color: white;
+  margin: auto;
+  border-radius: 3px;
+
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-bottom: 3px solid darkorange;
+}
