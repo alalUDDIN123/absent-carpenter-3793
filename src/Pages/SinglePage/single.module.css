@@ -1,0 +1,93 @@
+.onemain{
+    /* border: 2px solid red; */
+    display: flex;
+    margin: 30px 2% 5px 2%;
+    background-color: white;
+    padding: 1%;
+}
+.leftbox{
+    width: 40%;
+    /* border: 10px solid rgb(186, 186, 45); */
+    display: flex;
+}
+.rightbox{
+    width: 57%;
+    /* border: 3px solid green; */
+    padding: 0.5%;
+    
+}
+.imgdivbox{
+    
+    width:100%;
+    border: 0.5px solid rgba(128, 128, 128, 0.234)
+}
+.buttbox{
+    display: flex;
+    width: 60%;
+    /* border: 3px solid green; */
+    justify-content: space-evenly;
+    padding: 5px 20%;
+}
+.verticalline{
+width: 20%;
+/* border: 2px solid violet; */
+height: 100%;
+}
+.rightbox {
+    text-align: left;
+    
+}
+.rightbox div{
+    margin-bottom: 8px;
+}
+
+.ratetext{
+    color: #fff;
+    padding: 2px 4px 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    vertical-align: middle;
+    background-color: #388e3c;
+}
+.pricedivone :nth-child(1){
+
+    font-weight: 500;
+    font-size: 36px;
+    margin-right: 3%;
+}
+.pricedivone :nth-child(2){
+
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: line-through;
+    margin-right: 4%;
+}
+.pricedivone :nth-child(3){
+    font-weight: 500;
+    font-size: 17px;
+    
+    margin-right: 7%;
+    color: green;
+}
+.offertag{
+    width: 18px;
+}
+.offerline{
+    font-size: 15px;
+}
+.tandc{
+    color: #2874f0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.smallimg{
+    width: 90%;
+    padding: 5%;
+}
+.offer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
