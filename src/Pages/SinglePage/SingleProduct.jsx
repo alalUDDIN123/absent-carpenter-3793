@@ -10,7 +10,7 @@ function SingleProduct() {
     <div>
     <div>
    {/* <Cateline></Cateline> */} 
-   
+   <h1>single page</h1>
      <div className={styles.onemain}>
         <div className={styles.leftbox}>
             <div className={styles.verticalline}>
