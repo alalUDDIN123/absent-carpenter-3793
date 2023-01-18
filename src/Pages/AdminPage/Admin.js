@@ -1,28 +1,45 @@
 import React from 'react'
 import style from "./admin.module.css"
+import rightBarCss from "./dashboardRightbar.module.css"
+import LeftSide from './LeftSide'
+
 
 
 function Admin() {
+
   return (
     <>
       <div className={style["main-wrapper"]} >
         <div className={style["container-wrapper"]}>
+         <LeftSide />
+          <div>
+            {/* Middle statics */}
+            <div className={rightBarCss["middle-top"]} >
+              <div>
+                <h2>Total Users</h2>
+                <p>10</p>
+              </div>
 
-          {/* Left Side Bar */}
-          <div>
-        
-             <div>Logged User</div>
-             <div>Dashboard</div>
-             <div>Users</div>
-             <div>Orders</div>
-             <div>Products</div>
-             <div>Add Product</div>
-             <div>Logout</div>
-          </div>
-           
-           {/* Right Side bar */}
-          <div>
-            Right Side
+              <div>
+                <h2>Total Products</h2>
+                <p>10</p>
+              </div>
+
+              <div>
+                <h2>Total Orders</h2>
+                <p>10</p>
+              </div>
+
+              <div>
+                <h2>Sales Amount</h2>
+                <p>₹ 100,00.00</p>
+              </div>
+            </div>
+
+            {/* Middle Chart */}
+            <div className={rightBarCss["middle-chart"]} >
+
+            </div>
           </div>
 
         </div>
