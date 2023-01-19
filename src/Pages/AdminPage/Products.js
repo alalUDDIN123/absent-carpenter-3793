@@ -5,6 +5,7 @@ import CommonTop from './CommonTop'
 import orderStyle from "./orderstyle.module.css"
 
 import Table from './Table'
+import PieChart from './PieChart'
 
 const sendToCommonTop=[
   {
@@ -20,6 +21,13 @@ const sendToCommonTop=[
     "value":40,
   }
 ]
+
+const PieData = [
+  { x: "Products", y: 50 },
+  { x: "In Stock", y: 20 },
+  { x: "Out Of Stock", y: 30 },
+];
+
 
 function Products() {
 
@@ -80,7 +88,7 @@ function Products() {
                 </div>
               </div>
               <div>
-
+                      <PieChart orderData={PieData} />
               </div>
             </div>
           </div>

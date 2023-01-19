@@ -3,8 +3,9 @@ import LeftSide from './LeftSide'
 import style from "./admin.module.css"
 import CommonTop from './CommonTop'
 import orderStyle from "./orderstyle.module.css"
-
 import Table from './Table'
+
+import PieChart from './PieChart'
 const sendToCommonTop = [
   {
     "title": "Total Orders",
@@ -20,6 +21,16 @@ const sendToCommonTop = [
   }
 ]
 
+
+
+const PieData = [
+  { x: "Total Order", y: 50 },
+  { x: "Pending", y: 10 },
+  { x: "Delivered", y: 40 },
+];
+
+
+
 function Orders() {
   const [orderData, setOrderData] = useState([]);
 
@@ -34,7 +45,7 @@ function Orders() {
     })
   }, [])
 
-// console.log(orderData,"orderdata");
+  // console.log(orderData,"orderdata");
   return (
     <>
       <div className={style["main-wrapper"]} >
@@ -77,8 +88,9 @@ function Orders() {
 
                 </div>
               </div>
-              <div>
 
+              <div>
+               <PieChart orderData={PieData}/>
               </div>
             </div>
 

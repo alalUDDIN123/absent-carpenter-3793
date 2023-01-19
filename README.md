@@ -17,6 +17,7 @@
 10. `npm install @mui/icons-material`
 11. `npm install chart.js`
 12. `npm i react-chartjs-2`
+13. `npm install victory-pie --save`
 
 
 
