@@ -60,7 +60,7 @@ function Products() {
               <div>
                 <div className="card-body">
 
-                  <table className="table table-bordered">
+                  <table className="table">
                     <thead className="bg-dark text-white">
                       <tr>
                         <td>Product ID</td>

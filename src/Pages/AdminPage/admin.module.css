@@ -8,7 +8,7 @@
     }
 
     .container-wrapper {
-        width: 95%;
+        width: 99%;
         height: 100%;
         margin: 10px auto;
         display: flex;
@@ -18,13 +18,16 @@
     .container-wrapper>div:first-child {
         width: 25%;
         height: 100%;
-        border: 1px solid white;
+        /* border: 1px solid white; */
+        box-shadow: rgba(19, 243, 12, 0.24) 0px 3px 8px;
         color: white;
     }
 
     .container-wrapper>div:last-child {
-        width: 74%;
+        width: 70%;
         height: 100%;
+        margin-left: 70px;
+        /* background-color: yellow; */
 
     }
 
@@ -35,7 +38,7 @@
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
-        border-bottom: 1px solid yellow;
+        /* border-bottom: 1px solid yellow; */
     }
 
     .left-mainDiv>div:hover {

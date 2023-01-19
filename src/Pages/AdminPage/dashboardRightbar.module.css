@@ -1,8 +1,8 @@
 .middle-top {
-    width: 85%;
+    width: 98%;
     height: 20vh;
     display: flex;
-    /* border: 1px solid red; */
+    /* background-color: yellow; */
     margin: 10px auto;
     justify-content: space-evenly;
     gap: 15px;
@@ -33,13 +33,13 @@
 
 .middle-top>div:nth-child(3) {
     background-color: rgb(192 38 211);
-     color: white;
+    color: white;
     font-size: 25px;
     font-weight: 600;
 }
 
 .middle-top>div:nth-child(4) {
-	background-color: rgb(45 212 191);
+    background-color: rgb(45 212 191);
     color: black;
     font-size: 25px;
     font-weight: 600;

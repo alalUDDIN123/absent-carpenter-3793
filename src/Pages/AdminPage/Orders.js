@@ -61,10 +61,10 @@ function Orders() {
               <div>
                 <div className="card-body">
 
-                  <table className="table table-bordered">
+                  <table className="table">
                     <thead className="bg-dark text-white">
                       <tr>
-                        <td>Order ID</td>
+                        <td>Order Id</td>
                         <td>Orders Title</td>
                         <td>Price</td>
                         <td>Action</td>

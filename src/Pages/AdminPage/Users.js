@@ -28,7 +28,7 @@ function Users() {
 
                     {/* Right Side bar */}
                     <div>
-                        <div className={userstyle["main-userTable"]}>
+                    <div className={userstyle["main-userTable"]}>
                             <div className="card">
 
                                 <div className={userstyle['top-search']} >
