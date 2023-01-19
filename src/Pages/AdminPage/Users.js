@@ -3,12 +3,30 @@ import LeftSide from './LeftSide'
 import style from "./admin.module.css"
 import userstyle from "./user.module.css"
 
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    FormControl,
+    FormLabel,
+    Button,
+    Input
+} from '@chakra-ui/react'
+
 function Users() {
     const [userData, setUserData] = useState([]);
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
 
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/todos?_limit=7").then((res) => {
+        fetch("https://jsonplaceholder.typicode.com/users?_limit=7").then((res) => {
             return res.json();
         }).then((resp) => {
             setUserData(resp)
@@ -18,32 +36,81 @@ function Users() {
     }, [])
 
 
+    
+
+    const handleSubmit = () => { }
+
+    const showDetail = (id) => {}
+
+
 
     return (
         <>
             <div className={style["main-wrapper"]} >
                 <div className={style["container-wrapper"]}>
-
                     <LeftSide />
-
                     {/* Right Side bar */}
                     <div>
-                    <div className={userstyle["main-userTable"]}>
+                        <div className={userstyle["main-userTable"]}>
                             <div className="card">
-
                                 <div className={userstyle['top-search']} >
                                     <div>
                                         <input placeholder="Search user" className={userstyle.input} />
-
                                     </div>
                                     <div>
-                                        <button>Add User +</button>
+                                        <button onClick={onOpen}>Add User +</button>
                                     </div>
-
                                 </div>
 
-                                <div className="card-body">
 
+                                {/* Modal Box */}
+                                <Modal
+                                    initialFocusRef={initialRef}
+                                    finalFocusRef={finalRef}
+                                    isOpen={isOpen}
+                                    onClose={onClose}
+                                >
+                                    <ModalOverlay />
+                                    <ModalContent>
+                                        <ModalHeader>Add New User</ModalHeader>
+                                        <ModalCloseButton />
+                                        <ModalBody pb={6}>
+                                            <FormControl isRequired>
+                                                <FormLabel>Full Name</FormLabel>
+                                                <Input ref={initialRef} placeholder='Enter full name'
+                                                    value="alal" name="fullName" />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Email</FormLabel>
+                                                <Input placeholder='Enter email'
+                                                    value="email" name="email" />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>EPhone</FormLabel>
+                                                <Input placeholder='Enter phone'
+                                                    value="phone" name="phone" />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Avator URL</FormLabel>
+                                                <Input placeholder='Put Url' type="url"
+                                                    value="vator" name="avator" />
+                                            </FormControl>
+                                        </ModalBody>
+
+                                        <ModalFooter>
+                                            <Button colorScheme='blue' mr={3} onClick={handleSubmit} >
+                                                Submit
+                                            </Button>
+                                            <Button onClick={onClose}>Cancel</Button>
+                                        </ModalFooter>
+                                    </ModalContent>
+                                </Modal>
+
+
+                                <div className="card-body">
                                     <table className="table table-bordered">
                                         <thead className="bg-dark text-white">
                                             <tr>
@@ -55,23 +122,21 @@ function Users() {
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             {userData &&
                                                 userData.map(item => (
                                                     <tr key={item.id}>
                                                         <td>{item.id}</td>
-                                                        <td>alal</td>
-                                                        <td>alal@gmail.com</td>
-                                                        <td>+91 43254359874385</td>
+                                                        <td>{item.username}</td>
+                                                        <td>{item.email}</td>
+                                                        <td>{item.address.zipcode}</td>
                                                         <td>
                                                             <a className="btn btn-success">Edit</a>
                                                             <a className="btn btn-danger">Remove</a>
-                                                            <a className="btn btn-primary">Details</a>
+                                                            <a className="btn btn-primary" onClick={() => showDetail(item.id)} >Details</a>
                                                         </td>
                                                     </tr>
                                                 ))
                                             }
-
                                         </tbody>
                                     </table>
                                     <div className={userstyle["pagination"]} >
@@ -83,7 +148,6 @@ function Users() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>
