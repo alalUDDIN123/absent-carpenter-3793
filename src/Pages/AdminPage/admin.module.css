@@ -20,6 +20,8 @@
         height: 100%;
         /* border: 1px solid white; */
         box-shadow: rgba(19, 243, 12, 0.24) 0px 3px 8px;
+        border-right: 2px solid yellow;
+        border-bottom: 2px solid yellow;
         color: white;
     }
 
@@ -34,7 +36,7 @@
     .left-mainDiv>div {
         height: 11vh;
         width: 100%;
-        /* border: 2px solid gray; */
+       border-bottom: 1px solid rgb(79, 233, 7);
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
@@ -164,6 +166,7 @@
         font-weight: 600;
         color: yellow;
     }
+  
 }
 
 /* Medium Screen */
