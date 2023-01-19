@@ -1,0 +1,50 @@
+.middle-order{
+    border: 1px solid yellow;
+    width: 104%;
+    height: 70vh;
+    margin: 10px auto;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.middle-order>div:first-child{
+    width: 70%;
+  height: 100%;
+    /* border: 1px solid blue; */
+}
+.middle-order>div:last-child{
+    width: 29%;
+    height: auto;
+    border: 1px solid orange;
+}
+
+.pagination{
+    height: 25px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    float: right;
+    margin-top: -10px;
+    
+
+}
+.pagination>button{
+    width: 90%;
+    height: 100%;
+    font-size: 15px;
+    background-color: rgb(154 52 18);
+    color: white;
+    border-radius: 7px;
+   
+}
+.pagination>button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.order-details{
+    color: yellow;
+}

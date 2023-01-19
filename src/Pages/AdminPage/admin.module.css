@@ -2,7 +2,7 @@
 @media screen and (min-width: 1008px) {
     .main-wrapper {
         width: 100%;
-        height: 95vh;
+        height: auto;
         background-color: rgb(30 41 59);
 
     }
@@ -18,14 +18,14 @@
     .container-wrapper>div:first-child {
         width: 25%;
         height: 100%;
-       border: 1px solid white;
+        border: 1px solid white;
         color: white;
     }
 
     .container-wrapper>div:last-child {
         width: 74%;
-        height: 100%; 
-    
+        height: 100%;
+
     }
 
     .left-mainDiv>div {
@@ -38,11 +38,11 @@
         border-bottom: 1px solid yellow;
     }
 
-    .left-mainDiv>div:hover{
+    .left-mainDiv>div:hover {
         background-color: rgb(209 213 219);
         color: black;
     }
-   
+
 
     .left-mainDiv>div:nth-child(2) {
         padding: 15px;
@@ -51,9 +51,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(2)>svg{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(2)>svg {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:nth-child(3) {
@@ -63,9 +64,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(3)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(3)>span {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:nth-child(4) {
@@ -75,10 +77,12 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(4)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(4)>span {
+        padding: 20px;
+
     }
+
     .left-mainDiv>div:nth-child(5) {
         padding: 15px;
         padding-left: 20px;
@@ -86,9 +90,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(5)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(5)>span {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:nth-child(6) {
@@ -98,9 +103,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(6)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(6)>span {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:nth-child(7) {
@@ -110,9 +116,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(7)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(7)>span {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:nth-child(8) {
@@ -122,9 +129,10 @@
         align-items: center;
         gap: 20px;
     }
-    .left-mainDiv>div:nth-child(8)>span{
-       padding: 20px;
-       
+
+    .left-mainDiv>div:nth-child(8)>span {
+        padding: 20px;
+
     }
 
     .left-mainDiv>div:first-child {
