@@ -34,7 +34,7 @@ function Orders() {
     })
   }, [])
 
-console.log(orderData,"orderdata");
+// console.log(orderData,"orderdata");
   return (
     <>
       <div className={style["main-wrapper"]} >
