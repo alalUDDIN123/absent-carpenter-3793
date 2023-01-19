@@ -55,7 +55,7 @@ function Products() {
           {/* Right Side bar */}
           <div>
              <CommonTop sendToCommonTop={sendToCommonTop}/>
-
+                    
              <div className={orderStyle["middle-order"]} >
               <div>
                 <div className="card-body">

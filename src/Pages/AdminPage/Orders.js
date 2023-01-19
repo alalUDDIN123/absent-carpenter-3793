@@ -4,8 +4,8 @@ import style from "./admin.module.css"
 import CommonTop from './CommonTop'
 import orderStyle from "./orderstyle.module.css"
 import Table from './Table'
-
 import PieChart from './PieChart'
+
 const sendToCommonTop = [
   {
     "title": "Total Orders",
