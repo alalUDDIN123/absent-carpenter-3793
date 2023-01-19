@@ -18,6 +18,10 @@ const sendToCommonTop=[
   {
     "title":"Total Orders",
     "value":50,
+  },
+  {
+    "title":"Sales Amount",
+    "value":"₹ 100,00.00",
   }
 ]
 
@@ -54,7 +58,7 @@ function Admin() {
 
               <div>
                 <h2>Sales Amount</h2>
-                <p>₹ 100,00.00</p>
+                <p>"₹ 100,00.00"</p>
               </div>
             </div> */}
 
