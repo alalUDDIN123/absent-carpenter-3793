@@ -10,7 +10,7 @@ import Home from '../Pages/LandingPage/Home'
 import Products from '../Pages/Products/Products'
 import CartPage from '../Pages/SinglePage/CartPage'
 import SingleProduct from '../Pages/SinglePage/SingleProduct'
-import Navbar from './Navbar'
+
 import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
@@ -19,7 +19,7 @@ import AddProduct from '../Pages/AdminPage/AddProduct'
 function MainRoutes() {
     return (
         <>
-            <Navbar />
+            
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/signup' element={<SignUp />}></Route>

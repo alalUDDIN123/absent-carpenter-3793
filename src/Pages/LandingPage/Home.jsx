@@ -139,10 +139,10 @@ text3:"Liquid Retina Display"}
        },
        {
          image:
-           "https://rukminim1.flixcart.com/image/312/312/kqidx8w0/television/m/1/v/32ha0a00-oneplus-original-imag4gy8yezxdhen.jpeg?q=70",
-         text: "Apple iPads",
-         text2: "Shop Now",
-         text3: "Liquid Retina Display",
+           "https://rukminim1.flixcart.com/image/416/416/l5jxt3k0/power-bank/h/t/m/-original-imagg7nprsfvwttp.jpeg?q=70",
+         text: "Ambrane Poerbanks",
+         text2: "From 699",
+         text3: "Fast Charging High Capacity",
        },
       
      
