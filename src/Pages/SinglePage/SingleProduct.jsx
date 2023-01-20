@@ -3,13 +3,31 @@ import styles from "./single.module.css"
 
 import { Addbutton } from "./AddButton/Addbutton"
 import { Buybutton } from "./Buybutton/Buybutton"
-// import { Cateline } from "../Cateline/Catadiv"
+import {useDispatch} from "react-redux"
+import { useParams } from "react-router-dom"
+
 
 function SingleProduct() {
+
+  // const dispatch=useDispatch()
+
+  // const {id}=useParams()
+  
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div>
     <div>
-   {/* <Cateline></Cateline> */} 
    <h1>single page</h1>
      <div className={styles.onemain}>
         <div className={styles.leftbox}>
