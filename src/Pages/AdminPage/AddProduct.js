@@ -39,7 +39,7 @@ function AddProduct() {
                 <h3>Price : <span> Something.......</span> </h3>
                 <h3>Category: <span> Something.......</span> </h3>
                 <h3> 
-                  <img src="https://cdn1.smartprix.com/rx-iGNlyOFEo-w1200-h1200/GNlyOFEo.jpg" alt="image"/>
+                  <img src="https://cdn1.smartprix.com/rx-iGNlyOFEo-w1200-h1200/GNlyOFEo.jpg" alt="addimage"/>
                 </h3>
                 <h3>Description: <br /> <span> Something.......</span> </h3>
            
