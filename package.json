@@ -13,12 +13,22 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "apexcharts": "^3.36.3",
     "axios": "^1.2.2",
+<<<<<<< HEAD
     "firebase": "^9.16.0",
     "framer-motion": "^8.4.3",
     "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
+=======
+    "chart.js": "^4.1.2",
+    "framer-motion": "^8.4.3",
+    "json-server": "^0.17.1",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-chartjs-2": "^5.2.0",
+>>>>>>> 1e1906e3e7a61ac92faaa45bd6f52767bb2086d9
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
@@ -27,14 +37,19 @@
     "react-toastify": "^9.1.1",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
+<<<<<<< HEAD
     "sweetalert": "^2.1.2",
+=======
+    "victory-pie": "^36.6.8",
+>>>>>>> 1e1906e3e7a61ac92faaa45bd6f52767bb2086d9
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 8080 --routes routes.json"
   },
   "eslintConfig": {
     "extends": [

@@ -15,6 +15,7 @@ import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
 
+
 function MainRoutes() {
     return (
         <>
@@ -27,7 +28,7 @@ function MainRoutes() {
                 <Route path='/products/:id' element={<SingleProduct />}></Route>
                 <Route path='/cart' element={<CartPage />}></Route>
                 <Route path='/checkout' element={<Checkout />}></Route>
-                <Route path='/admin' element={<Admin />}></Route>
+                <Route path='/admin/dashboard' element={<Admin />}></Route>
                 <Route path='/admin/users' element={<Users />}></Route>
                 <Route path='/admin/products' element={<AdminProducts />}></Route>
                 <Route path='/admin/orders' element={<Orders />}></Route>
