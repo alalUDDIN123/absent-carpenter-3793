@@ -4,7 +4,6 @@ import { AiOutlineBarChart,AiOutlineAppstoreAdd} from "react-icons/ai"
 import { FiUsers } from "react-icons/fi"
 import { BsFillBagCheckFill,BsHandbagFill} from "react-icons/bs"
 import { IoLogOutOutline} from "react-icons/io5"
-import { GrNext} from "react-icons/gr"
 import style from "./admin.module.css"
 import { useNavigate } from 'react-router-dom'
 
