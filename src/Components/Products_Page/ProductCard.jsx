@@ -8,14 +8,11 @@ import {
   UnorderedList,
   ListItem,
   Text,
-  VStack,
   Flex,
-  SimpleGrid,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import { AiFillStar } from "react-icons/ai";
-//const  image1="https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/g/p/x/-original-imagk4nz54s7a7rf.jpeg?q=70"
 const ProductCard = (product) => {
   const {
     id,
@@ -31,7 +28,6 @@ const ProductCard = (product) => {
     display,
     screen_size,
     camera,
-
     primary_camera,
     secondary_camera,
     _battery_capacity,
