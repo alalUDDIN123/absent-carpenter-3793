@@ -1,7 +1,10 @@
 import React from "react";
+//import { Stack } from '@chakra-ui/react'
+
 import {
   Box,
   Flex,
+  Avatar,
   HStack,
   Link,
   IconButton,
@@ -22,7 +25,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-const Links = ["My Account", "Become A Seller", "More"];
+const Links = [ "Login","Become A Seller", "More"];
 
 const NavLink = ({ children }) => (
   <Link
@@ -120,7 +123,9 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
+            
               {Links.map((link) => (
+                
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </Stack>
