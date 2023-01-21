@@ -2,7 +2,7 @@
     border: 2px solid red;
     display: flex;
     margin: 20px 2% 5px 2%;
-    background-color: white;
+    background-color: white; 
     padding: 1%;
     gap:5px
 }
