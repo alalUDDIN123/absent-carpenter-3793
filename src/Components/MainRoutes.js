@@ -15,6 +15,7 @@ import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
 import Footer from './Footer'
+import UserDetails from '../Pages/AdminPage/UserDetails'
 
 
 function MainRoutes() {
@@ -31,6 +32,7 @@ function MainRoutes() {
                 <Route path='/checkout' element={<Checkout />}></Route>
                 <Route path='/admin/dashboard' element={<Admin />}></Route>
                 <Route path='/admin/users' element={<Users />}></Route>
+                <Route path='/admin/users/:id' element={<UserDetails/>}></Route>
                 <Route path='/admin/products' element={<AdminProducts />}></Route>
                 <Route path='/admin/orders' element={<Orders />}></Route>
                 <Route path='/admin/addProduct' element={<AddProduct />}></Route>

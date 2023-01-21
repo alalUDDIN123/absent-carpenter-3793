@@ -93,12 +93,57 @@ form textarea {
 .preview>h3:nth-child(5) {
     width: 90%;
     height: 15vh;
-    
+
 
 }
 
 .preview>h3:nth-child(5)>img {
     width: 50%;
     height: 100%;
-   
+
 }
+
+
+/*  user details */
+
+.main-cont>div:first-child>img {
+    width: 50%;
+    height: 33vh;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.user-creden {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.user-creden>h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.user-creden>h2>span {
+    margin-left: 30px;
+    color: yellow;
+}
+
+.main-cont>div:last-child>h1 {
+    text-align: center;
+    margin: 10px 0px 65px 0px;
+    font-size: 25px;
+}
+
+.main-cont>div:last-child>h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.main-cont>div:last-child>h2>span {
+    margin-left: 30px;
+    color: yellow;
+}
+
