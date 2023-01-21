@@ -9,7 +9,7 @@ function Table({id}) {
                 <td>sdfbdskfcslfclsadaaaaaaaaaa</td>
                 <td>₹ 4564</td>
                 <td>
-                    <button className="btn btn-primary" >Details</button>
+                    <a className="btn btn-primary">Details</a>
                 </td>
             </tr>
         </>

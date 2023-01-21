@@ -1,11 +1,11 @@
 import React from 'react'
 
-function CartPage() {
+function SignUp() {
   return (
     <div>
-      Cart Page
+      Sign Up
     </div>
   )
 }
 
-export default CartPage
+export default SignUp

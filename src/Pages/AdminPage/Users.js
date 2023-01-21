@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LeftSide from './LeftSide'
 import style from "./admin.module.css"
 import userstyle from "./user.module.css"
+import {useNavigate} from "react-router-dom"
 
 import {
     Modal,
@@ -17,12 +18,15 @@ import {
     Button,
     Input
 } from '@chakra-ui/react'
+import axios from 'axios'
 
 function Users() {
     const [userData, setUserData] = useState([]);
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+
+    const navigate=useNavigate()
 
 
     useEffect(() => {
@@ -35,12 +39,14 @@ function Users() {
         })
     }, [])
 
-
-    
-
     const handleSubmit = () => { }
 
-    const showDetail = (id) => {}
+    const deleteUser= async (id)=>{
+        let res= await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+        console.log(res)
+    }
+
+
 
 
 
@@ -88,7 +94,7 @@ function Users() {
                                             </FormControl>
 
                                             <FormControl mt={4} isRequired>
-                                                <FormLabel>EPhone</FormLabel>
+                                                <FormLabel>Phone</FormLabel>
                                                 <Input placeholder='Enter phone'
                                                     value="phone" name="phone" />
                                             </FormControl>
@@ -131,8 +137,8 @@ function Users() {
                                                         <td>{item.address.zipcode}</td>
                                                         <td>
                                                             <a className="btn btn-success">Edit</a>
-                                                            <a className="btn btn-danger">Remove</a>
-                                                            <a className="btn btn-primary" onClick={() => showDetail(item.id)} >Details</a>
+                                                            <a className="btn btn-danger" onClick={()=>deleteUser(item.id)} >Remove</a>
+                                                            <a className="btn btn-primary" onClick={() => navigate(`/admin/users/${item.id}`)} >Details</a>
                                                         </td>
                                                     </tr>
                                                 ))
@@ -155,4 +161,3 @@ function Users() {
 }
 
 export default Users
-

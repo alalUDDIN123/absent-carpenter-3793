@@ -1,11 +1,11 @@
 import React from 'react'
 
-function CartPage() {
+function Checkout() {
   return (
     <div>
-      Cart Page
+      Checkout
     </div>
   )
 }
 
-export default CartPage
+export default Checkout
