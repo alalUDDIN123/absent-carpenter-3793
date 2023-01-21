@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import LeftSide from './LeftSide'
 import style from "./admin.module.css"
 import userstyle from "./user.module.css"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import {
     Modal,
@@ -26,7 +26,7 @@ function Users() {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -41,12 +41,22 @@ function Users() {
 
     const handleSubmit = () => { }
 
-    const deleteUser= async (id)=>{
-        let res= await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+    const deleteUser = async (id) => {
+        let res = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
         console.log(res)
     }
 
+    const payload = {
+        fullname: "",
+        email: "",
+        password: "",
+        avtor: "",
+        phone: "",
+        cart: [],
+        purchase: [],
+        favorite: [],
 
+    }
 
 
 
@@ -137,7 +147,7 @@ function Users() {
                                                         <td>{item.address.zipcode}</td>
                                                         <td>
                                                             <a className="btn btn-success">Edit</a>
-                                                            <a className="btn btn-danger" onClick={()=>deleteUser(item.id)} >Remove</a>
+                                                            <a className="btn btn-danger" onClick={() => deleteUser(item.id)} >Remove</a>
                                                             <a className="btn btn-primary" onClick={() => navigate(`/admin/users/${item.id}`)} >Details</a>
                                                         </td>
                                                     </tr>
