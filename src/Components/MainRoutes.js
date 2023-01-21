@@ -14,6 +14,7 @@ import Navbar from './Navbar'
 import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
+import Footer from './Footer'
 
 
 function MainRoutes() {
@@ -35,6 +36,7 @@ function MainRoutes() {
                 <Route path='/admin/addProduct' element={<AddProduct />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
             </Routes>
+            <Footer />
         </>
     )
 }
