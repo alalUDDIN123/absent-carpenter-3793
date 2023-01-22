@@ -66,7 +66,7 @@ const ProductCard = (product) => {
   const handlePath=()=>{
 
     dispatch(setSingleProduct(product))
-    navigate(`products/${path}/${id}`)
+    navigate(`/products/${path}/${id}`)
   }
  // console.log(product);
   return (
