@@ -3247,7 +3247,7 @@
       ]
     },
     {
-      "fullname": "alala",
+      "fullname": "Alal",
       "email": "test@gmail.com",
       "password": "amol23s",
       "phone": 910000000,
@@ -3340,6 +3340,30 @@
       "purchase": [],
       "favorite": [],
       "id": 15
+    },
+    {
+      "fullname": "Gaurav",
+      "email": "Gaurav@v.com",
+      "password": "Gaurav@v.com",
+      "phone": 9074967678,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "isAdmin": false,
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 16
+    },
+    {
+      "fullname": "SHUBHAM VERMA",
+      "email": "a@j.com",
+      "password": "a@j.com",
+      "phone": 9074967678,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "isAdmin": false,
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 17
     }
   ],
   "admin": [
