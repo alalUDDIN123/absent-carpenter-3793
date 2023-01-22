@@ -11,9 +11,18 @@ import {
   Flex,
   Grid,
   GridItem,
+  Button,
+  VStack,
 } from "@chakra-ui/react";
 import { AiFillStar } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setSingleProduct } from "../../redux/ProductsReducer/action";
+
 const ProductCard = (product) => {
+  const path=useSelector((store)=>store.ProductsManager. currentRoute)
+  const navigate=useNavigate()
+  const dispatch= useDispatch()
   const {
     id,
     image1,
@@ -54,6 +63,11 @@ const ProductCard = (product) => {
     profit,
   } = product;
 
+  const handlePath=()=>{
+
+    dispatch(setSingleProduct(product))
+    navigate(`products/${path}/${id}`)
+  }
  // console.log(product);
   return (
     <Box p="20px">
@@ -61,9 +75,10 @@ const ProductCard = (product) => {
         fontSize="sm"
         templateColumns="repeat(6,1fr)"
         justify="space-between"
+      
       >
-        <GridItem p="10px 30px" colSpan={1}>
-          <Image src={image1} alt={id} />
+        <GridItem p="10px 30px" colSpan={1} h="250px">
+          <Image src={image1} alt={id} h="100%" />
         </GridItem>
         <GridItem colSpan={3}>
           <Heading size="md">{name}</Heading>
@@ -96,8 +111,9 @@ const ProductCard = (product) => {
           </UnorderedList>
         </GridItem>
 
-        <GridItem colSpan={2}>
-          <Flex>
+        <GridItem colSpan={2} >
+          <Flex   flexDirection= "column" alignItems= "start" justifyContent="space-between" height= "100%" >
+          <Flex justify= "space-between">
             <Box>
               <Heading size="md"> ₹ {discountPrice}</Heading>
               <HStack>
@@ -125,8 +141,13 @@ const ProductCard = (product) => {
             </Box>
             {assured && <Image src={assured} alt={id} h="21px" />}
           </Flex>
+        
+          <Button mb="50px" colorScheme="green" onClick={handlePath}>Show Details</Button>
+         
+          </Flex>
         </GridItem>
       </Grid>
+     
     </Box>
   );
 };

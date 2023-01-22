@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import ProductCard from "../../Components/Products_Page/ProductCard";
 import { ProductFilter } from "../../Components/Products_Page/ProductFilter";
@@ -8,13 +8,17 @@ import {  getProductData } from "../../api";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsSuccessAction } from "../../redux/ProductsReducer/action";
+import Pagination from "../../Components/Products_Page/Pagination";
 
 function Products() {
   const dispatch=useDispatch()
   const location = useLocation();
+  const [page,setPage] =useState(1)
   const data=useSelector((store)=>store.ProductsManager.products)
-  // const data=data1?.filter((ele,i)=>i<20)
-  // console.log(data)
+
+   const data1=data?.filter((ele,i)=>(page-1)*5<=i && i<(page*5) && i<data.length-1)
+  
+
   const [searchParams, setSearchParams] = useSearchParams();
   
 const searchParamsObject = {};
@@ -40,10 +44,14 @@ for (let [key, value] of searchParams.entries()) {
         <SimpleGrid templateColumns="20% 80%">
       <ProductFilter   {...{searchObject,setSearchObject,data}}/>
           <Box>
-            {data.map((product) => (
+            {data1?.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
+            <Center>
+             <Pagination {...{data, page, setPage}}/>
+             </Center>
           </Box>
+
         </SimpleGrid>
       )}
     </Box>
