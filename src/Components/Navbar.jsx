@@ -62,8 +62,9 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
+  const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -79,7 +80,12 @@ export default function Navbar() {
 
     let filter = user.filter((el) => el.password === payload.password && el.email === payload.email)
     if (filter.length > 0) {
+      const adminKeys = filter.map(user => user.isAdmin);
+      if(adminKeys[0]===true){
+        setAdminAccess(prev=>!prev)
       
+      };
+
       toast("Login Successful")
     } else {
       toast("Accoun not found")
@@ -95,6 +101,7 @@ export default function Navbar() {
   }, [user.length])
 
   // console.log(user)
+  // console.log(adminAccess)
 
   return (
     <>
@@ -112,8 +119,8 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive" 
-              onClick={()=>navigate("/")} >Masai-Kart</Text>
+              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive"
+                onClick={() => navigate("/")} >Masai-Kart</Text>
               <Image
                 w="30px"
                 h="30px"
@@ -145,6 +152,8 @@ export default function Navbar() {
               <Text cursor={'pointer'} color={'white'} onClick={onOpen} >Login</Text>
               <Text cursor={'pointer'} color={'white'} >Become A Seller</Text>
               <Text cursor={'pointer'} color={'white'} >More</Text>
+              {adminAccess && <Button onClick={()=>navigate("/admin/dashboard")} >Admin Panel</Button>}
+              
             </HStack>
           </HStack>
 
