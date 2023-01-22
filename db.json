@@ -3212,7 +3212,7 @@
       "phone": 38246329534,
       "avator": "https://avatars.githubusercontent.com/u/105916676?s=64&v=4",
       "purchase": 0,
-      "isAdmin":true,
+      "isAdmin": true,
       "cart": [
         {
           "productId": 1200,
@@ -3233,7 +3233,7 @@
       "phone": 382445784,
       "avator": "https://avatars.githubusercontent.com/u/86251005?s=64&v=4",
       "purchase": 0,
-      "isAdmin":true,
+      "isAdmin": true,
       "cart": [
         {
           "productId": 1200,
@@ -3251,12 +3251,12 @@
       "email": "test@gmail.com",
       "password": "amol23s",
       "phone": 910000000,
+      "isAdmin": true,
       "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
       "cart": [],
       "purchase": [],
       "favorite": [],
-      "id": 8,
-      "isAdmin":false
+      "id": 8
     },
     {
       "fullname": "Ruchi Priya",
@@ -3268,7 +3268,7 @@
       "purchase": [],
       "favorite": [],
       "id": 9,
-      "isAdmin":false
+      "isAdmin": false
     },
     {
       "fullname": "Shubham verma",
@@ -3280,7 +3280,7 @@
       "purchase": [],
       "favorite": [],
       "id": 10,
-      "isAdmin":false
+      "isAdmin": false
     },
     {
       "fullname": "Manoj attri",
@@ -3292,7 +3292,7 @@
       "purchase": [],
       "favorite": [],
       "id": 11,
-      "isAdmin":false
+      "isAdmin": false
     },
     {
       "fullname": "Dummy user",
@@ -3304,7 +3304,7 @@
       "purchase": [],
       "favorite": [],
       "id": 12,
-      "isAdmin":false
+      "isAdmin": false
     },
     {
       "fullname": "Dad Ullah",
@@ -3316,14 +3316,40 @@
       "purchase": [],
       "favorite": [],
       "id": 13,
-      "isAdmin":false
+      "isAdmin": false
+    },
+    {
+      "fullname": "SHUBHAM VERMA",
+      "email": "imkannu.shubham@gmail.com",
+      "password": "masaichool",
+      "phone": 8083455346,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 14
+    },
+    {
+      "fullname": "Gaurav",
+      "email": "Gaurav@v.com",
+      "password": "Gaurav@v.com",
+      "phone": 9074967678,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "isAdmin": false,
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 15
     }
   ],
   "admin": [
     {
-      "name": "alal",
-      "password": "alal@123",
-      "email": "alal@gmail.com",
+      "id": 1,
+      "fullname": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "phone": 38246329534,
+      "avator": "https://avatars.githubusercontent.com/u/105916676?s=64&v=4",
       "product": [
         {
           "phones": 5,

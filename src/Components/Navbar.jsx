@@ -1,5 +1,9 @@
-import React from "react";
-//import { Stack } from '@chakra-ui/react'
+
+
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Signup } from "../Pages/Authentication/Signup";
 
 import {
   Box,
@@ -45,13 +49,14 @@ const NavLink = ({ children }) => (
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+
   return (
     <>
       <Box
         bg={useColorModeValue("#2874f0", "gray.900")}
         px={{ base: 0, sm: 3, md: 5, lg: 24 }}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"} >
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -61,17 +66,12 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Image
-                w="80px"
-                h="37px"
-                src="./Masai-Kart.png"
-                alt="err"
-              />
+
               <Image
                 w="30px"
-                h="30px"
+                h="20px"
                 src="./Masai-Kart.png"
-                alt="err"
+
               />
             </HStack>
             <Box display={{ base: "none", md: "none", lg: "block" }}>
@@ -94,11 +94,7 @@ export default function Navbar() {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <Text cursor={'pointer'} color={'white'}  key={link}>{link}</Text>
-              ))}
-            </HStack>
-          </HStack>
+
           <Flex alignItems={"center"}>
             <Menu>
               <MenuButton
