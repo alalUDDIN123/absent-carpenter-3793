@@ -41,9 +41,13 @@ export const ProductFilter = ({ searchObject, setSearchObject, data }) => {
 
     const countNum = (key) => (key == undefined ? (key = 1) : (key += 1));
 
-    data.forEach((product) =>
+    data.forEach((product,i) =>{
+    if(i<data.length-1)
       Object.keys(product).forEach((key) => {
-        if (key[0] == "_" && product[key] !== null) {
+       if(key=="_battery_capacity"){
+        product[key]=product[key].split("mAh")[0]+" mAh"
+       }
+        if (key[0] == "_" && product[key] != null) {
           if (filterDataKey[key] == undefined) {
             filterDataKey[key] = {};
             if (product[key]) {
@@ -70,7 +74,8 @@ export const ProductFilter = ({ searchObject, setSearchObject, data }) => {
           }
         }
       })
-    );
+    
+  });
     console.log(filterDataKey);
     setfilterKeys(filterDataKey);
   };
