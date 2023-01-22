@@ -62,9 +62,13 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
+  const navigate = useNavigate();
   const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const [change, setChange]  =  useState(true);
+
+  const [loginUserName, setLoginUserName] = useState("")
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -85,12 +89,12 @@ export default function Navbar() {
         setAdminAccess(prev=>!prev)
       
       };
-
+      setLoginUserName(filter[0].fullname)
       toast("Login Successful")
     } else {
       toast("Accoun not found")
     }
-
+     // console.log("username",filter[0].fullname);
     onClose()
   }
 
@@ -149,7 +153,7 @@ export default function Navbar() {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >Login</Text>
+              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >{loginUserName?`Hi-${loginUserName}`:"Login"}</Text>
               <Text cursor={'pointer'} color={'white'} >Become A Seller</Text>
               <Text cursor={'pointer'} color={'white'} >More</Text>
               {adminAccess && <Button onClick={()=>navigate("/admin/dashboard")} >Admin Panel</Button>}
