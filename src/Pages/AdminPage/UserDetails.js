@@ -2,21 +2,23 @@ import React from 'react'
 import style from "./admin.module.css"
 import LeftSide from './LeftSide'
 import addformStyle from "./addProduct.module.css"
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useState } from 'react'
 function UserDetails() {
-    // const { id } = useParams()
-    // const [user, setUser] = useState({});
+    const { id } = useParams()
+    const [user, setUser] = useState({});
 
 
-    // useEffect(() => {
-    //     fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
-    //         return res.json();
-    //     }).then((resp) => {
-    //         setUser(resp)
-    //     }).catch((err) => {
-    //         console.log(err.message);
-    //     })
-    // }, [])
+    useEffect(() => {
+        fetch(`http://localhost:8080/users/${id}`).then((res) => {
+            return res.json();
+        }).then((resp) => {
+            setUser(resp)
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, [])
     // console.log(user)
 
     return (
@@ -31,11 +33,11 @@ function UserDetails() {
                     <div>
                         <div className={addformStyle["main-cont"]} >
                             <div>
-                                <img src="https://avatars.githubusercontent.com/u/103638279?s=120&v=4" alt="Avator" />
+                                <img src={user.avator} alt={user.fullname} />
                                 <div className={addformStyle["user-creden"]} >
-                                    <h2>Email  :  <span>test@gmail.com</span> </h2>
-                                    <h2>Phone  :  <span>test123@</span></h2>
-                                    <h2>Password  :  <span>test123@</span></h2>
+                                    <h2>Email  :  <span>{user.email}</span> </h2>
+                                    <h2>Phone  :  <span>{user.phone}</span></h2>
+                                    <h2>Password  :  <span>{user.password}</span></h2>
 
                                 </div>
                             </div>
@@ -43,7 +45,7 @@ function UserDetails() {
 
                             <div className={addformStyle.preview} >
                                 <h1>User Info</h1>
-                                <h2>Name : <span>Test</span> </h2>
+                                <h2>Name : <span>{user.fullname}</span> </h2>
                                 <h2>Father name : <span>Abdul jabbar</span> </h2>
                                 <h2>Mother name : <span>Malika jannath</span> </h2>
                                 <h2>Profession :  <span>Lawyer</span> </h2>

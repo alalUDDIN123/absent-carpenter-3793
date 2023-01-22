@@ -4,8 +4,6 @@ import Admin from '../Pages/AdminPage/Admin'
 import Users from '../Pages/AdminPage/Users'
 import AdminProducts from '../Pages/AdminPage/Products'
 import Checkout from '../Pages/Authentication/Checkout'
-import SignIn from '../Pages/Authentication/SignIn'
-import SignUp from '../Pages/Authentication/SignUp'
 import Home from '../Pages/LandingPage/Home'
 import Products from '../Pages/Products/Products'
 import CartPage from '../Pages/SinglePage/CartPage'
@@ -18,14 +16,13 @@ import Footer from './Footer'
 import UserDetails from '../Pages/AdminPage/UserDetails'
 
 
+
 function MainRoutes() {
     return (
         <>
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />}></Route>
-                <Route path='/signup' element={<SignUp />}></Route>
-                <Route path='/sigin' element={<SignIn />}></Route>
                 <Route path='/products/:key' element={<Products />}></Route>
                 <Route path='/products/:key/:id' element={<SingleProduct />}></Route>
                 <Route path='/cart' element={<CartPage />}></Route>

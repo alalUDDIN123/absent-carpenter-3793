@@ -1,10 +1,10 @@
-import React from "react";
-//import { Stack } from '@chakra-ui/react'
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
@@ -22,11 +22,26 @@ import {
   InputRightElement,
   Input,
   Text,
+  FormControl,
+  FormLabel,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
-const Links = [ "Login","Become A Seller", "More"];
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser } from "../redux/AppReducer/action";
 
+const initiaState = {
+  password: "",
+  email: ""
+}
+
+const Links = ["Login", "Become A Seller", "More"];
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -44,6 +59,39 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [state, setState] = useState(initiaState)
+  const user = useSelector(store => store.userReducer.users)
+  const dispatch = useDispatch()
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({ ...state, [name]: value })
+  }
+
+
+  const handleSubmit = () => {
+
+    const payload = {
+      email: state.email,
+      password: state.password
+    }
+
+    let filter = user.filter((el) => el.password === payload.password && el.email === payload.email)
+    if (filter.length > 0) {
+      toast("Login Successful")
+    } else {
+      toast("Accoun not found")
+    }
+
+    onClose()
+  }
+
+  useEffect(() => {
+    if (user.length === 0) {
+      dispatch(getUser())
+    }
+  }, [user.length])
+
+  // console.log(user)
 
   return (
     <>
@@ -65,15 +113,16 @@ export default function Navbar() {
                 w="80px"
                 h="37px"
                 src="./Masai-Kart.png"
-                alt="err"
+                alt="Masai-Kart"
               />
               <Image
                 w="30px"
                 h="30px"
                 src="./Masai-Kart.png"
-                alt="err"
+                alt="Masai-Kart"
               />
             </HStack>
+            <ToastContainer />
             <Box display={{ base: "none", md: "none", lg: "block" }}>
               <InputGroup boxShadow={"md"} backgroundColor="white">
                 <InputRightElement
@@ -94,11 +143,115 @@ export default function Navbar() {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <Text cursor={'pointer'} color={'white'}  key={link}>{link}</Text>
-              ))}
+              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >Login</Text>
+              <Text cursor={'pointer'} color={'white'} >Become A Seller</Text>
+              <Text cursor={'pointer'} color={'white'} >More</Text>
             </HStack>
           </HStack>
+
+
+          <Modal isOpen={isOpen} onClose={onClose} size="2xl" padding="0px">
+            <ModalOverlay />
+
+            <ModalContent>
+              <ModalBody padding="-1.5">
+                <ToastContainer />
+                <ModalCloseButton
+                  size="lg"
+                  color="white"
+                  marginRight="-3.5rem"
+                  marginTop="-4"
+                />
+                <div style={{ display: "flex" }}>
+                  <Box height="32rem" bg="#2874f0" width="16rem" padding="35px">
+                    <Text fontWeight="600" color="white" fontSize="2xl">
+                      Welcome back
+                    </Text>
+                    <Text
+                      fontWeight="600"
+                      marginTop="15px"
+                      color="#Dbdbdb"
+                      fontSize="1xl"
+                    >
+                      Login with email and password
+
+                    </Text>
+                    <Image
+                      marginTop="10rem"
+                      src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
+                      alt="image"
+                    />
+                  </Box>
+                  <Box height="32rem" padding="35" width="24rem" color="#878787">
+                    <FormControl>
+
+                      <FormLabel marginTop="5">Email address</FormLabel>
+                      <Input
+                        variant="flushed"
+                        required
+                        // label="Email"
+                        placeholder="Enter email address"
+                        value={state.email}
+                        name="email"
+                        onChange={handleChange}
+                      />
+                      <Text color="red" fontSize="xs">
+
+                      </Text>
+                      <FormLabel marginTop="5">Password</FormLabel>
+                      <Input
+                        // color="black"
+
+                        variant="flushed"
+                        required
+                        // label="Password"
+                        placeholder="Enter password"
+                        value={state.password}
+                        name="password"
+                        onChange={handleChange}
+
+                      />
+                      <Text color="red" fontSize="xs">
+
+                      </Text>
+
+                      <Button
+                        borderRadius="0.5"
+                        marginTop="4"
+                        padding="6"
+                        color="white"
+                        bg="#fb641b"
+                        width="19.7rem"
+                        onClick={handleSubmit}
+                      >
+                        CONTINUE
+
+                      </Button>
+                      <Button
+                        marginTop="4"
+                        boxShadow="md"
+                        p="6"
+                        rounded="md"
+                        borderRadius="0.5"
+                        padding="6"
+                        color="#2f74f0"
+                        bg="#fff"
+                        width="19.7rem"
+                        _hover={"#fff"}
+                      >
+                        Don not have an account ? Register
+                      </Button>
+                    </FormControl>
+                  </Box>
+                </div>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+
+
+
+
+
           <Flex alignItems={"center"}>
             <Menu>
               <MenuButton
@@ -108,7 +261,7 @@ export default function Navbar() {
                 cursor={"pointer"}
                 minW={0}
               >
-                <Box><HiOutlineShoppingCart size='2.2rem' color='white'/></Box>
+                <Box><HiOutlineShoppingCart size='2.2rem' color='white' /></Box>
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
@@ -123,9 +276,9 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-            
+
               {Links.map((link) => (
-                
+
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </Stack>
