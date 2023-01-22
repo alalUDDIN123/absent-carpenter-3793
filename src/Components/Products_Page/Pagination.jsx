@@ -2,9 +2,9 @@ import { Box, Button, ButtonGroup } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const Pagination = ({ data, page, setPage }) => {
-  const [total, setTotal] = useState(data.length-1);
-  const  totalpage=Math.ceil(total / 5)
-  console.log(total)
+  // const [total, setTotal] = useState(data.length-1);
+  const  totalpage=Math.ceil((data.length-1 )/ 5)
+  // console.log(total)
   // useEffect(() => {
   //   setTotal(data.length);
   // }, []);

@@ -2,7 +2,9 @@ import { Box, Button, HStack, Image, SimpleGrid, Text, VStack } from '@chakra-ui
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
+
 //import Navbar from "../components/Navbar";
+
 
 const Home = () => {
   const navigate=useNavigate()
