@@ -62,9 +62,11 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
+  const navigate = useNavigate();
   const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const [change, setChange]  =  useState(true);
+
   const [loginUserName, setLoginUserName] = useState("")
   
   const handleChange = (e) => {
