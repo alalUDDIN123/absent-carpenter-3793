@@ -79,6 +79,7 @@ export default function Navbar() {
 
     let filter = user.filter((el) => el.password === payload.password && el.email === payload.email)
     if (filter.length > 0) {
+      
       toast("Login Successful")
     } else {
       toast("Accoun not found")
