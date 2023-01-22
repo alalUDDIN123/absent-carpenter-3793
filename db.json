@@ -28,15 +28,19 @@
       "ratedCount": "6,221 Ratings",
       "review": "450 Reviews",
       "basicSpecification": "4 GB ROM | 64 MB RAM",
-      "_ram_capacity": ["64 MB"],
-      "_internal_storage": ["4 GB"],
+      "_ram_capacity": [
+        "64 MB"
+      ],
+      "_internal_storage": [
+        "4 GB"
+      ],
       "display": "4.5 cm (1.77 inch) Display",
       "_screen_size": 1.77,
       "camera": "0.3MP Rear Camera",
       "_primary_camera": 0.3,
-      "secondary_camera": null,
+      "_secondary_camera": null,
       "_battery_capacity": "800 mAh Battery",
-      "_processor": "12 Months",
+      "processorSpecification": "12 Months",
       "_processor_brand": "",
       "_speciality": "",
       "network_type": "2G",
@@ -84,15 +88,21 @@
       "ratedCount": "635 Ratings",
       "review": "51 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 256 GB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["64 GB ", "128 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB ",
+        "128 GB"
+      ],
       "display": "17.27 cm (6.8 inch) HD+ Display",
       "_screen_size": 6.8,
       "camera": "13MP Rear Camera | 8MP Front Camera",
       "_primary_camera": 13,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "6000 mAh Battery",
-      "_processor": "Helio G25 Processor",
+      "processorSpecification": "Helio G25 Processor",
       "_processor_brand": "Helio",
       "_speciality": "Long-Lasting Battery",
       "network_type": "3G",
@@ -143,15 +153,21 @@
       "ratedCount": "21,907 Ratings",
       "review": "1,627 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["64 GB ", "128 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB ",
+        "128 GB"
+      ],
       "display": "17.02 cm (6.7 inch) HD+ Display",
       "_screen_size": 6.7,
       "camera": "50MP + 2MP | 5MP Front Camera",
       "_primary_camera": 50,
       "_secondary_camera": 5,
       "_battery_capacity": "6000 mAh Lithium Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Long-Lasting Battery",
       "_network_type": "4G",
@@ -166,7 +182,7 @@
       "offer2": "",
       "waranty": "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
       "diliveryBy": "2 PM, Tomorrow",
-      "topDiscount": "? 10,350",
+      "topDiscount": "10,350",
       "including": "Off on Exchange",
       "dealers": "Hari Singh Bisht",
       "postedQuantity": 40,
@@ -195,15 +211,19 @@
       "ratedCount": "2,13,583 Ratings",
       "review": "12,189 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.59 cm (6.53 inch) HD+ Display",
       "_screen_size": 6.53,
       "camera": "13MP Rear Camera | 5MP Front Camera",
       "_primary_camera": 13,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "5000 mAh Li-Polymer Battery",
-      "_processor": "MediaTek Helio G25 Processor",
+      "processorSpecification": "MediaTek Helio G25 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "",
       "_network_type": "4G",
@@ -247,15 +267,19 @@
       "ratedCount": "2,13,583 Ratings",
       "review": "12,189 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.59 cm (6.53 inch) HD+ Display",
       "_screen_size": 6.53,
       "camera": "13MP Rear Camera | 5MP Front Camera",
       "_primary_camera": 13,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "5000 mAh Li-Polymer Battery",
-      "_processor": "MediaTek Helio G25 Processor",
+      "processorSpecification": "MediaTek Helio G25 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "",
       "_network_type": "4G",
@@ -270,7 +294,7 @@
       "offer2": "",
       "waranty": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
       "diliveryBy": "2 PM, Tomorrow",
-      "topDiscount": "? 6,650",
+      "topDiscount": "6,650",
       "including": "Off on Exchange",
       "dealers": "Ruchi Priya Kumari",
       "postedQuantity": 20,
@@ -293,15 +317,19 @@
       "ratedCount": "21,907 Ratings",
       "review": "1,627 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["6 GB"],
-      "_internal_storage": ["128 GB"],
+      "_ram_capacity": [
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "128 GB"
+      ],
       "display": "17.02 cm (6.7 inch) HD+ Display",
       "_screen_size": 6.7,
       "camera": "50MP + 2MP | 5MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "6000 mAh Lithium Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Long-Lasting Battery",
       "network_type": "5G",
@@ -316,7 +344,7 @@
       "offer2": "",
       "waranty": "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
       "diliveryBy": "2 PM, Tomorrow",
-      "topDiscount": "? 10,350",
+      "topDiscount": "10,350",
       "including": "Off on Exchange",
       "dealers": "Alal Uddin ",
       "postedQuantity": 16,
@@ -351,15 +379,20 @@
       "ratedCount": "1,39,293 Ratings",
       "review": "11,256 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["128 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "128 GB"
+      ],
       "display": "16.76 cm (6.6 inch) Full HD+ Display",
       "_screen_size": 6.6,
       "camera": "50MP + 8MP + 2MP | 8MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Lithium Ion Battery",
-      "_processor": "Qualcomm Snapdragon 750G Processor",
+      "processorSpecification": "Qualcomm Snapdragon 750G Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "",
       "_network_type": "4G",
@@ -407,15 +440,20 @@
       "ratedCount": "51 Ratings",
       "review": "4 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.76 cm (6.6 inch) Full HD+ Display",
       "_screen_size": 6.6,
       "camera": "50MP + 2MP | 8MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Battery",
-      "_processor": "MediaTek Helio G35 Processor",
+      "processorSpecification": "MediaTek Helio G35 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "",
       "_network_type": "4G",
@@ -461,15 +499,20 @@
       "ratedCount": "31,624 Ratings",
       "review": "1,978 Reviews",
       "basicSpecification": "6 GB RAM | 64 GB ROM | Expandable Upto 512 GB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.33 cm (6.43 inch) Full HD+ Display",
       "_screen_size": 6.43,
       "camera": "64MP + 8MP + 2MP + 2MP | 13MP Front Camera",
       "_primary_camera": 64,
-      "secondary_camera": 13,
+      "_secondary_camera": 13,
       "_battery_capacity": "5000 mAh Lithium Polymer Battery",
-      "_processor": "Mediatek Helio G95 Octa Core Processor",
+      "processorSpecification": "Mediatek Helio G95 Octa Core Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "Big Storage",
       "network_type": "5G",
@@ -519,15 +562,21 @@
       "ratedCount": "1,59,513 Ratings",
       "review": "12,573 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB", "6 GB"],
-      "_internal_storage": ["64 GB", "128 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB",
+        "128 GB"
+      ],
       "display": "16.71 cm (6.58 inch) Full HD+ Display",
       "_screen_size": 6.58,
       "camera": "50MP + 2MP + 2MP | 16MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Lithium Battery",
-      "_processor": "Qualcomm Snapdragon 695 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 695 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Big Storage",
       "_network_type": "4G",
@@ -576,15 +625,19 @@
       "ratedCount": "11,304 Ratings",
       "review": "1,320 Reviews",
       "basicSpecification": "6 GB RAM | 64 GB ROM | Expandable Upto 2 TB",
-      "_ram_capacity": ["6 GB"],
-      "_internal_storage": ["64 GB "],
+      "_ram_capacity": [
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB "
+      ],
       "display": "17.02 cm (6.7 inch) Full HD+ AMOLED Display",
       "_screen_size": 6.7,
       "camera": "50 MP + 2 MP Depth Lens + AI Lens | 16MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Li-ion Polymer Battery",
-      "_processor": "Mediatek Dimensity 810 5G Processor",
+      "processorSpecification": "Mediatek Dimensity 810 5G Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "Selfie Camera",
       "_network_type": "4G",
@@ -599,7 +652,7 @@
       "offer2": "",
       "waranty": "1 Year on Handset and 6 Months on Accessories",
       "diliveryBy": "2 PM, Tomorrow",
-      "topDiscount": "? 12,000",
+      "topDiscount": "12,000",
       "including": "Off on Exchange",
       "dealers": "Alal Uddin ",
       "postedQuantity": 100,
@@ -622,15 +675,19 @@
       "ratedCount": "527 Ratings",
       "review": "50 Reviews",
       "basicSpecification": "32 MB RAM | 32 MB ROM",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["32 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "32 GB"
+      ],
       "display": "6.1 cm (2.4 inch) Display",
       "_screen_size": 2.4,
       "camera": "1.3MP Rear Camera",
       "_primary_camera": 1.3,
-      "secondary_camera": 0,
+      "_secondary_camera": 0,
       "_battery_capacity": "1800 mAh Battery",
-      "_processor": "1 Year",
+      "processorSpecification": "",
       "_processor_brand": "",
       "_speciality": "",
       "network_type": "3G",
@@ -668,15 +725,19 @@
       "ratedCount": "1,68,084 Ratings",
       "review": "10,971 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "17.02 cm (6.7 inch) HD+ Display",
       "_screen_size": 6.7,
       "camera": "50MP + 2MP | 5MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "6000 mAh Lithium Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Long-Lasting Battery",
       "_network_type": "4G",
@@ -714,15 +775,19 @@
       "ratedCount": "1,68,084 Ratings",
       "review": "10,971 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "17.02 cm (6.7 inch) HD+ Display",
       "_screen_size": 6.7,
       "camera": "50MP + 2MP | 5MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "6000 mAh Lithium Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Higher Performance",
       "_network_type": "4G",
@@ -770,15 +835,19 @@
       "ratedCount": "57,331 Ratings",
       "review": "5,709 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.51 cm (6.5 inch) HD+ Display",
       "_screen_size": 6.5,
       "camera": "48MP + 2MP + 2MP | 8MP Front Camera",
       "_primary_camera": 48,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Battery",
-      "_processor": "UNISOC T700 Processor",
+      "processorSpecification": "UNISOC T700 Processor",
       "_processor_brand": "Unisoc",
       "_speciality": "Higher Performance",
       "_network_type": "4G",
@@ -816,15 +885,19 @@
       "ratedCount": "57,331 Ratings",
       "review": "5,709 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.51 cm (6.5 inch) HD+ Display",
       "_screen_size": 6.5,
       "camera": "48MP + 2MP + 2MP | 8MP Front Camera",
       "_primary_camera": 48,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Battery",
-      "_processor": "UNISOC T700 Processor",
+      "processorSpecification": "UNISOC T700 Processor",
       "_processor_brand": "Unisoc",
       "_speciality": "Higher Performance",
       "network_type": "5G",
@@ -862,15 +935,19 @@
       "ratedCount": "69,738 Ratings",
       "review": "3,941 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.71 cm (6.58 inch) Full HD+ Display",
       "_screen_size": 6.55,
       "camera": "50MP + 2MP | 8MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "",
       "network_type": "3G",
@@ -908,15 +985,19 @@
       "ratedCount": "17,376 Ratings",
       "review": "1,735 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.64 cm (6.55 inch) Full HD+ Display",
       "_screen_size": 6.55,
       "camera": "50MP + 8MP + 2MP | 16MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Lithium Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 680 Processor",
+      "processorSpecification": "Qualcomm Snapdragon 680 Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Selfie Camera",
       "network_type": "5G",
@@ -954,15 +1035,19 @@
       "ratedCount": "62,381 Ratings",
       "review": "6,398 Reviews",
       "basicSpecification": "6 GB RAM | 64 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["6 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.94 cm (6.67 inch) Full HD+ Super AMOLED Display",
       "_screen_size": 6.67,
       "camera": "64MP + 8MP + 2MP | 16MP Front Camera",
       "_primary_camera": 64,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Lithium-ion Polymer Battery",
-      "_processor": "Qualcomm Snapdragon 695 5G Processor",
+      "processorSpecification": "Qualcomm Snapdragon 695 5G Processor",
       "_processor_brand": "Snapdragon",
       "_speciality": "Selfie Camera",
       "_network_type": "4G",
@@ -1000,15 +1085,19 @@
       "ratedCount": "1,85,546 Ratings",
       "review": "11,232 Reviews",
       "basicSpecification": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["64 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "64 GB"
+      ],
       "display": "16.59 cm (6.53 inch) HD+ Display",
       "_screen_size": 6.53,
       "camera": "13MP + 2MP + 2MP | 5MP Front Camera",
       "_primary_camera": 13,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "5000 mAh Lithium-ion Polymer Battery",
-      "_processor": "MediaTek Helio G35 Processor",
+      "processorSpecification": "MediaTek Helio G35 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "Higher Performance",
       "network_type": "5G",
@@ -1046,15 +1135,19 @@
       "ratedCount": "1,60,616 Ratings",
       "review": "9,510 Reviews",
       "basicSpecification": "4 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["4 GB"],
-      "_internal_storage": ["128 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
+      "_internal_storage": [
+        "128 GB"
+      ],
       "display": "16.76 cm (6.6 inch) Full HD+ Display",
       "_screen_size": 6.6,
       "camera": "50MP + 2MP + 0.3MP | 8MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 8,
+      "_secondary_camera": 8,
       "_battery_capacity": "5000 mAh Lithium Polymer Battery",
-      "_processor": "Unisoc Tiger T616 Processor",
+      "processorSpecification": "Unisoc Tiger T616 Processor",
       "_processor_brand": "Unisoc",
       "_speciality": "",
       "_network_type": "4G",
@@ -1066,7 +1159,7 @@
       "_diliveryMethod": "Free delivery",
       "assured": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png",
       "offer1": "Upto",
-      "offer2": "? 12,000",
+      "offer2": "12,000",
       "waranty": "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
       "diliveryBy": "",
       "topDiscount": "Off on Exchange",
@@ -1092,15 +1185,20 @@
       "ratedCount": "8,455 Ratings",
       "review": "733 Reviews",
       "basicSpecification": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["8 GB"],
-      "_internal_storage": ["128 GB"],
+      "_ram_capacity": [
+        "6 GB",
+        "8 GB"
+      ],
+      "_internal_storage": [
+        "128 GB"
+      ],
       "display": "16.76 cm (6.6 inch) Full HD+ Display",
       "_screen_size": 6.6,
       "camera": "50MP + 8MP | 16MP Front Camera",
       "_primary_camera": 50,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Lithium-ion Polymer Battery",
-      "_processor": "Mediatek Dimensity 810 Processor",
+      "processorSpecification": "Mediatek Dimensity 810 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "Big Storage",
       "network_type": "3G",
@@ -1115,7 +1213,7 @@
       "offer2": "Upto",
       "waranty": "One Year for Handset, 6 Months for Accessories",
       "diliveryBy": "2 PM, Tomorrow",
-      "topDiscount": "? 14,300",
+      "topDiscount": "14,300",
       "including": "Off on Exchange",
       "dealers": "Shubham Verma",
       "postedQuantity": 21,
@@ -1138,15 +1236,19 @@
       "ratedCount": "1,32,007 Ratings",
       "review": "12,081 Reviews",
       "basicSpecification": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["6 GB"],
-      "_internal_storage": ["128 GB"],
+      "_ram_capacity": [
+        "6 GB"
+      ],
+      "_internal_storage": [
+        "128 GB"
+      ],
       "display": "16.33 cm (6.43 inch) Full HD+ AMOLED Display",
       "_screen_size": 6.43,
       "camera": "64MP + 8MP + 2MP | 16MP Front Camera",
       "_primary_camera": 64,
-      "secondary_camera": 16,
+      "_secondary_camera": 16,
       "_battery_capacity": "5000 mAh Lithium-ion Polymer Battery",
-      "_processor": "Mediatek Helio G96 Processor",
+      "processorSpecification": "Mediatek Helio G96 Processor",
       "_processor_brand": "MediaTek",
       "_speciality": "Big Storage",
       "_network_type": "4G",
@@ -1184,15 +1286,19 @@
       "ratedCount": "68,741 Ratings",
       "review": "3,604 Reviews",
       "basicSpecification": "2 GB RAM | 32 GB ROM | Expandable Upto 1 TB",
-      "_ram_capacity": ["2 GB"],
-      "_internal_storage": [" 32 GB"],
+      "_ram_capacity": [
+        "2 GB"
+      ],
+      "_internal_storage": [
+        " 32 GB"
+      ],
       "display": "16.51 cm (6.5 inch) HD+ Display",
       "_screen_size": 6.5,
       "camera": "8MP Rear Camera | 5MP Front Camera",
       "_primary_camera": 8,
-      "secondary_camera": 5,
+      "_secondary_camera": 5,
       "_battery_capacity": "5000 mAh Lithium Ion Battery",
-      "_processor": "Unisoc T612 Processor",
+      "processorSpecification": "Unisoc T612 Processor",
       "_processor_brand": "Unisoc",
       "_speciality": "",
       "network_type": "2G",
@@ -1236,9 +1342,9 @@
       "_screen_size": null,
       "camera": "",
       "_primary_camera": null,
-      "secondary_camera": null,
+      "_secondary_camera": null,
       "_battery_capacity": "",
-      "_processor": "",
+      "processorSpecification": "",
       "_processor_brand": "",
       "_speciality": "",
       "network_type": "",
@@ -1284,12 +1390,18 @@
       "_processor_brand": "Intel",
       "_usage": "Business",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 Inch) Display",
       "_screen_size": 15.6,
       "extra": "Office Home and Student 2021",
@@ -1334,12 +1446,18 @@
       "_processor_brand": "AMD",
       "_usage": "Content Creation",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["8 GB", "16 GB"],
+      "_ram_capacity": [
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 10 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "HP Documentation, HP e-service, HP BIOS Recovery, HP SSRM, HP Smart, HP Jumpstarts",
@@ -1381,12 +1499,17 @@
       "_processor_brand": "Intel",
       "_usage": "Business",
       "basicSpecification": "4 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 6,
       "_operating_system": "64 bit Windows 10 Operating System",
       "_hard_disk_capacity": "1 TB HDD",
       "_storage_type": "HDD",
-      "_internal_storage": ["1 TB"],
+      "_internal_storage": [
+        "1 TB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "Splendid",
@@ -1432,12 +1555,18 @@
       "_processor_brand": "Intel",
       "_usage": "High Performance",
       "basicSpecification": "16 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "35.56 cm (14 inch) Display",
       "_screen_size": 14,
       "extra": "",
@@ -1480,12 +1609,17 @@
       "_processor_brand": "Intel",
       "_usage": "Student",
       "basicSpecification": "8GB DDR4 & 1TB HDD + 256GB SSD",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 8,
       "_operating_system": "64 bit Windows 10 Operating System",
       "_hard_disk_capacity": "256 GB HDD|256 GB SSD",
       "_storage_type": "HDD | SSD",
-      "_internal_storage": ["256 GB "],
+      "_internal_storage": [
+        "256 GB "
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "",
@@ -1529,12 +1663,18 @@
       "_processor_brand": "Intel",
       "_usage": "Business",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 2,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "1 Year Onsite Warranty",
@@ -1578,12 +1718,19 @@
       "_processor_brand": "Intel",
       "_usage": "Business",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB", "16 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 9,
       "_operating_system": "Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "MS Office Home & Student 2019, Mi Smart Share, DTS Audio processing",
@@ -1626,12 +1773,18 @@
       "_processor_brand": "Intel",
       "_usage": "Student",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 2,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "Office Home and Student 2021",
@@ -1677,12 +1830,17 @@
       "_processor_brand": "AMD",
       "_usage": "Student",
       "basicSpecification": "4 GB LPDDR4 RAM",
-      "_ram_capacity": ["4 GB"],
+      "_ram_capacity": [
+        "4 GB"
+      ],
       "_detailed_graphics_memory": 2,
       "_operating_system": "Chrome Operating System",
       "_hard_disk_capacity": "1 TB HDD",
       "_storage_type": "HDD",
-      "_internal_storage": ["512 GB", "1 TB"],
+      "_internal_storage": [
+        "512 GB",
+        "1 TB"
+      ],
       "display": "39.62 cm (15.6 Inch) Display",
       "_screen_size": 15.6,
       "extra": "",
@@ -1726,12 +1884,18 @@
       "_processor_brand": "Intel",
       "_usage": "Gaming",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["8 GB", "16 GB"],
+      "_ram_capacity": [
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 10,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "256 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "35.56 cm (14 inch) Display",
       "_screen_size": 14,
       "extra": "",
@@ -1774,12 +1938,18 @@
       "_processor_brand": "AMD",
       "_usage": "Business",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "256 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "",
@@ -1823,12 +1993,18 @@
       "_processor_brand": "AMD",
       "_usage": "Business",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["256 GB", "512 GB"],
+      "_internal_storage": [
+        "256 GB",
+        "512 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "Microsoft Office 2019 & Office 365, HP Documentation, HP BIOS recovery, HP Smart",
@@ -1877,12 +2053,18 @@
       "_processor_brand": "AMD",
       "_usage": "Gaming",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["8 GB", "16 GB"],
+      "_ram_capacity": [
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 8,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["512 GB", "1TB"],
+      "_internal_storage": [
+        "512 GB",
+        "1TB"
+      ],
       "display": "43.94 cm (17.3 Inch) Display",
       "_screen_size": 17.3,
       "extra": "",
@@ -1923,12 +2105,17 @@
       "_processor_brand": "Intel",
       "_usage": "Student",
       "basicSpecification": "4 GB LPDDR4 RAM",
-      "_ram_capacity": ["4 GB", "8 GB"],
+      "_ram_capacity": [
+        "4 GB",
+        "8 GB"
+      ],
       "_detailed_graphics_memory": 2,
       "_operating_system": "DOS Operating System",
       "_hard_disk_capacity": "256 GB HDD|256 GB SSD",
       "_storage_type": "HDD/ SSD",
-      "_internal_storage": ["256 GB"],
+      "_internal_storage": [
+        "256 GB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "",
@@ -1978,12 +2165,18 @@
       "_processor_brand": "AMD",
       "_usage": "Content Creation",
       "basicSpecification": "8 GB DDR4 RAM",
-      "_ram_capacity": ["8 GB", "16 GB"],
+      "_ram_capacity": [
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 4,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["512 GB", "1 TB"],
+      "_internal_storage": [
+        "512 GB",
+        "1 TB"
+      ],
       "display": "39.62 cm (15.6 inch) Display",
       "_screen_size": 15.6,
       "extra": "",
@@ -2027,12 +2220,18 @@
       "_processor_brand": "AMD",
       "_usage": "Content Creation",
       "basicSpecification": "16 GB DDR4 RAM",
-      "_ram_capacity": ["8 GB", "16 GB"],
+      "_ram_capacity": [
+        "8 GB",
+        "16 GB"
+      ],
       "_detailed_graphics_memory": 8,
       "_operating_system": "64 bit Windows 11 Operating System",
       "_hard_disk_capacity": "512 GB SSD",
       "_storage_type": "SSD",
-      "_internal_storage": ["512 GB", "1 TB"],
+      "_internal_storage": [
+        "512 GB",
+        "1 TB"
+      ],
       "display": "39.62 cm (15.6 Inch) Display",
       "_screen_size": 15.6,
       "extra": "Microsoft Office 2021 Home & Student, HP Documentation, HP BIOS recovery, HP Smart",
@@ -2970,7 +3169,9 @@
     {
       "id": null,
       "image1": "",
-      "images1": [""],
+      "images1": [
+        ""
+      ],
       "video": "",
       "name": "",
       "_brand": "",
@@ -3002,11 +3203,141 @@
       "profit": "0"
     }
   ],
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Madhukar",
+      "password": "madhukar13",
+      "email": "madhukar@gmail.com",
+      "phone": 38246329534,
+      "avator": "https://avatars.githubusercontent.com/u/105916676?s=64&v=4",
+      "purchase": 0,
+      "cart": [
+        {
+          "productId": 1200,
+          "quantity": 1
+        }
+      ],
+      "favorite": [
+        {
+          "productId": 1200
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullname": "Hari singh",
+      "password": "hari123",
+      "email": "hari@gmail.com",
+      "phone": 382445784,
+      "avator": "https://avatars.githubusercontent.com/u/86251005?s=64&v=4",
+      "purchase": 0,
+      "isAdmin":true,
+      "cart": [
+        {
+          "productId": 1200,
+          "quantity": 1
+        }
+      ],
+      "favorite": [
+        {
+          "productId": 1200
+        }
+      ]
+    },
+    {
+      "fullname": "alala",
+      "email": "test@gmail.com",
+      "password": "amol23s",
+      "phone": 910000000,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 8
 
-  "users": {
-    "admin": [],
-    "customers": []
-  },
+    },
+    {
+      "fullname": "Ruchi Priya",
+      "email": "Ruchi@gmail.com",
+      "password": "ruchi@&",
+      "phone": "5464566456",
+      "avator": "https://avatars.githubusercontent.com/u/105973023?s=64&v=4",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 9,
+      "isAdmin":false
+    },
+    {
+      "fullname": "Shubham verma",
+      "email": "shubahm@gmail.com",
+      "password": "shubhma@&",
+      "phone": "54645645",
+      "avator": "https://avatars.githubusercontent.com/u/103638279?s=64&v=4",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 10,
+      "isAdmin":false
+    },
+    {
+      "fullname": "Manoj attri",
+      "email": "manoj@gmail.com",
+      "password": "manoj@gmail.com",
+      "phone": "91 60025435345",
+      "avator": "https://avatars.githubusercontent.com/u/101379807?s=64&v=4",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 11,
+      "isAdmin":false
+    },
+    {
+      "fullname": "Dummy user",
+      "email": "summy@gmail.com",
+      "password": "dum12$",
+      "phone": "6456757",
+      "avator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsGjDJxNoPQgkbqeBPV0yYH7CNMJwficf9hw&usqp=CAU",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 12,
+      "isAdmin":false
+    },
+    {
+      "fullname": "Dad Ullah",
+      "email": "Dadullah@gmail.com",
+      "password": "dad1215#$",
+      "phone": "456456557",
+      "avator": "https://lh3.googleusercontent.com/amgMuPXIH6PY7FzM0xLB6Cizwn82-dysabCRlogNjU3y9OO7GBaKPhTjPD8Uu1CKzgCyuDn-0fURXCh7CPHkkZ6STOfYQaS3s-TdyyuVb8kpkwB-PcKLp1BGHXZJctP_kY9dSe0gw180yJfsu6nYP9qh6RuD8FQsEygUIS6-B5Qt7DSNBvQhM1F6uJksGUhmpMXwjkzJEwFlGDvINA4Dn9VMWxp-kjJKAw_hByaBqPqzYfOp-SBD0ZV10bJBqRmoaiOnXoAdecRduOuM_rfRK_gToSjd_6KuTpthVV_ennHOa8PTVazreRsleyIUnoDqGXdOCiwxBKCZTXr2YeEEAKZ2deOud4mBm6VQadZCrxbzI-hG1Op5UHZ9DVtZN7oVqiR4fdTtD19TaBR-VPWQbB_bCpudO_bUZD6wFNr5N_i6erdF85AyoRVCRuoNi6Fn9P9Q02aK264bDOVeOFTTy9NGIQXl7lRgb8hiXJ7T1aTs0_7oSdzoMUpE18thsoq5-SMOTbp9YBYfKI3tnnYlk6bcj8dIBefvX8GJEp6Tm4yXpk8ZhFq4J_jmE6rODWACNQpiidg5j1-xBIR8rllBd0K3SBmq2EZmVoGowRvz_BNfsBehsxq2tI3zNyZOqtYstI5YfW88es3tYWeJhAkZqOYRMbv_u6sGbCGVH07XZxqxNOLXmS8-_vYbpR9jcGTy1f_SMxFEtZQGahKtS3sAi2jOVyQUtq6Y5q1OrQ1XagS9-WzPn7xrNWCsy4fd8s-pxsJlPbtpc7IWJLBRKQ6cCmEf540SoI5rS6iNEmUYKZ0KjNyASMHuDP4D71-Ecpe5_YHee805O2Z6gNDgQy68xiCB7CFv59tWu9C1CmusOaMBCgjkAeoCEE3YXaCQGwNqzhlhsg5e_OolbkQYA0fNHqEdn77fqqx5ujDJQhlJcxXVL-lErG0ZbLHXSHaQPOZ614OC-hXIvZtS2vyVGgwVnHw9lBXcXHGQG66W6vrlY3eCyENeo4QdyXZOgFFLc04UjfoMbI3sj6MSWp1WfHARkSvarLRenFtOcpCk54pw2Maes6DJqPM7HdMRTHYGTjzqkdqGWx-JX0x8N3cYOF6iMAQidkpapEcNZrE=w216-h288-no?authuser=5",
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 13,
+      "isAdmin":false
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "fullname": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "phone": 38246329534,
+      "avator": "https://avatars.githubusercontent.com/u/105916676?s=64&v=4",
+      "product": [
+        {
+          "phones": 5,
+          "profit": 5000
+        },
+        {
+          "telivision": 10,
+          "profit": 100000
+        }
+      ]
+    }
+  ],
   "hardCoded Data": {
     "bankOffers": [
       "Bank Offer10% off on Citi Credit Card and EMI Transactions, up to ₹1,500. On orders of ₹5,000 and aboveT&C",

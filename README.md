@@ -18,6 +18,10 @@
 11. `npm install chart.js`
 12. `npm i react-chartjs-2`
 13. `npm install victory-pie --save`
+14. `npm i styled-components`
+15. `npm i react-slick`
+16. `npm i slick-carousel`
+17. `npm install react-image-magnify`
 
 
 
@@ -32,7 +36,7 @@
 3. Hari Singh Bisht
 4. Madhukar Kakade
 5. Ruchi Priya Kumari
-
+ 
 ## Folder Structure 📂
 
 - src 📂

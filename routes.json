@@ -4,7 +4,7 @@
     "/products/laptops": "/laptops",
     "/products/laptops/:id": "/laptops/:id",
     "/products/television": "/television",
-    "/products/television/:id": "/television/:id"
-
+    "/products/television/:id": "/television/:id",
+    "/products/phones/:_brand"  : "/phones ?_brand=:_brand"
    
 }

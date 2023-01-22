@@ -1,33 +1,46 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser } from '../../redux/AppReducer/action'
 import style from "./admin.module.css"
 import Chart from './Chart'
 import CommonTop from './CommonTop'
 import rightBarCss from "./dashboardRightbar.module.css"
 import LeftSide from './LeftSide'
 
-const sendToCommonTop=[
-  {
-    "title":"Total Users",
-    "value":10,
-  },
-  {
-    "title":"Total Products",
-    "value":20,
-  },
-  {
-    "title":"Total Orders",
-    "value":50,
-  },
-  {
-    "title":"Sales Amount",
-    "value":"₹ 100,00.00",
-  }
-]
 
 function Admin() {
 
+  const user = useSelector(store => store.userReducer.users)
+  const dispatch = useDispatch()
 
+
+  const sendToCommonTop = [
+    {
+      "title": "Total Users",
+      "value": user.length,
+    },
+    {
+      "title": "Total Products",
+      "value": 20,
+    },
+    {
+      "title": "Total Orders",
+      "value": 50,
+    },
+    {
+      "title": "Sales Amount",
+      "value": "₹ 100,00.00",
+    }
+  ]
+
+  useEffect(() => {
+    if (user.length === 0) {
+      dispatch(getUser())
+    }
+  }, [])
+
+  // console.log(user)
 
   return (
     <>
@@ -66,7 +79,7 @@ function Admin() {
 
             {/* Middle Chart */}
             <div className={rightBarCss["middle-chart"]} >
-             <Chart />
+              <Chart />
             </div>
           </div>
 
