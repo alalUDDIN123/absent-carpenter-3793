@@ -16,14 +16,14 @@ const Home = () => {
       image:
         "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f8bd5669e19e724.png?q=100",
       text: "Mobiles & Tablets",
-      href: "/mobile"
+      href: "/phones"
     },
 
     {
       image:
         "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/361d53b8725c2d2d.png?q=100",
       text: "Electronics",
-      href: "/electronics"
+      href: "/laptops"
     },
     {
       image:
@@ -490,7 +490,7 @@ const Home = () => {
             <VStack w={"full"} key={i}>
               <Image w="80px" src={el.image} alt="err" />
               <Text fontSize={"xs"} fontWeight="bold">
-                <a href={el.href} target="_blank">{el.text}</a>
+                <a href={`/products${el.href}`} target="_blank">{el.text}</a>
               </Text>
             </VStack>
           </>

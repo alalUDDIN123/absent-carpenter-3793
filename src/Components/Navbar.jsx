@@ -118,7 +118,7 @@ export default function Navbar() {
                 w="30px"
                 h="30px"
                 src="./Masai-Kart.png"
-                alt="Masai-Kart"
+                alt="kart"
               />
             </HStack>
             <ToastContainer />
