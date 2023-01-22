@@ -46,17 +46,7 @@ function Users() {
         console.log(res)
     }
 
-    const payload = {
-        fullname: "",
-        email: "",
-        password: "",
-        avtor: "",
-        phone: "",
-        cart: [],
-        purchase: [],
-        favorite: [],
 
-    }
 
 
 

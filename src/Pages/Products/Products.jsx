@@ -32,7 +32,7 @@ for (let [key, value] of searchParams.entries()) {
    dispatch(getProductData(route,searchObject)).then(res =>dispatch( getProductsSuccessAction(res)))
     setSearchParams({...searchObject});
     
-  },[location.search,searchObject])
+  },[location.search,searchObject,dispatch,location.pathname, setSearchParams])
 
   return (
     <Box>
