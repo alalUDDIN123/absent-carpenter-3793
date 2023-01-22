@@ -26,30 +26,59 @@ import {
   FormLabel,
   Link,
 } from "@chakra-ui/react";
+import { addUser, getUser } from "../../redux/AppReducer/action";
+import { useDispatch } from "react-redux";
+
+const InitialState = {
+  fullName: "",
+  email: "",
+  password: "",
+  avator: "",
+  phone: +910000000,
+};
+
 export function Signup() {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    pass: "",
-  });
+  const [state, setState] = useState(InitialState);
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const dispatch = useDispatch();
   const [error, setError] = useState({});
 
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const handleSubmission = () => {
-   
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({ ...state, [name]: value });
+  };
+
+  const handleSubmit = () => {
+    if (state.fullName === "" || state.email === "" || state.password === "") {
+      toast("Please Enter all field");
+    } else {
+      const payload = {
+        fullname: state.fullName,
+        email: state.email,
+        password: state.password,
+        phone: 9074967678,
+        avator:
+          "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+        isAdmin: false,
+        cart: [],
+        purchase: [],
+        favorite: [],
+      };
+      toast("Signup Successfull");
+      dispatch(addUser(payload));
+      dispatch(getUser());
+      onClose();
+    }
   };
 
   return (
     <>
       <Button
         _hover={{ bg: "white" }}
-        fontWeight="400"
-        marginBottom="2"
         bg="white"
         textAlign="center"
         onClick={onOpen}
@@ -95,12 +124,9 @@ export function Signup() {
                   <Input
                     variant="flushed"
                     placeholder="Enter your name"
-                    onChange={(event) =>
-                      setValues((prev) => ({
-                        ...prev,
-                        name: event.target.value,
-                      }))
-                    }
+                    name="fullName"
+                    onChange={handleChange}
+                    value={state.fullName}
                   />
                   <FormLabel marginTop="5">Email address</FormLabel>
                   <Input
@@ -108,12 +134,9 @@ export function Signup() {
                     required
                     // label="Email"
                     placeholder="Enter email address"
-                    onChange={(event) =>
-                      setValues((prev) => ({
-                        ...prev,
-                        email: event.target.value,
-                      }))
-                    }
+                    name="email"
+                    onChange={handleChange}
+                    value={state.email}
                   />
                   <Text color="red" fontSize="xs">
                     {error.email}
@@ -126,12 +149,9 @@ export function Signup() {
                     required
                     // label="Password"
                     placeholder="Enter password"
-                    onChange={(event) =>
-                      setValues((prev) => ({
-                        ...prev,
-                        pass: event.target.value,
-                      }))
-                    }
+                    name="password"
+                    onChange={handleChange}
+                    value={state.password}
                   />
                   <Text color="red" fontSize="xs">
                     {error.password}
@@ -155,7 +175,7 @@ export function Signup() {
                     color="white"
                     bg="#fb641b"
                     width="19.7rem"
-                    onClick={handleSubmission}
+                    onClick={handleSubmit}
                     disabled={submitButtonDisabled}
                   >
                     CONTINUE
@@ -172,7 +192,7 @@ export function Signup() {
                     width="19.7rem"
                     _hover={"#fff"}
                   >
-                    Existing User? Login 
+                    Existing User? Login
                   </Button>
                 </FormControl>
               </Box>

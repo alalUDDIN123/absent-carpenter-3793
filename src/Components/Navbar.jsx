@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { Signup } from "../Pages/Authentication/Signup";
 import {
   Box,
   Flex,
@@ -251,7 +251,7 @@ export default function Navbar() {
                         width="19.7rem"
                         _hover={"#fff"}
                       >
-                        Don not have an account ? Register
+                        Do not have an account ? <Signup onClose={onClose} />
                       </Button>
                     </FormControl>
                   </Box>

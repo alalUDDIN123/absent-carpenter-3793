@@ -3212,7 +3212,7 @@
       "phone": 38246329534,
       "avator": "https://avatars.githubusercontent.com/u/105916676?s=64&v=4",
       "purchase": 0,
-      "isAdmin":true,
+      "isAdmin": true,
       "cart": [
         {
           "productId": 1200,
@@ -3251,7 +3251,7 @@
       "email": "test@gmail.com",
       "password": "amol23s",
       "phone": 910000000,
-      "isAdmin":true,
+      "isAdmin": true,
       "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
       "cart": [],
       "purchase": [],
@@ -3328,6 +3328,18 @@
       "purchase": [],
       "favorite": [],
       "id": 14
+    },
+    {
+      "fullname": "Gaurav",
+      "email": "Gaurav@v.com",
+      "password": "Gaurav@v.com",
+      "phone": 9074967678,
+      "avator": "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
+      "isAdmin": false,
+      "cart": [],
+      "purchase": [],
+      "favorite": [],
+      "id": 15
     }
   ],
   "admin": [
