@@ -4,7 +4,8 @@ import {
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
   SET_PRODUCTS_ROUTE,
-  SET_ALL_PRODUCTS_DATA
+  SET_ALL_PRODUCTS_DATA,
+  SET_SINGLE_PRODUCT_DATA
 } from "./actionType";
 
 const initialState = {
@@ -31,6 +32,8 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state,  currentRoute:payload };
     case SET_ALL_PRODUCTS_DATA:
       return { ...state, allProducts:{...state.allProducts,[payload.route]:payload.data} };
+      case SET_SINGLE_PRODUCT_DATA:
+      return { ...state, singleProduct: payload };
     case EDIT_PRODUCT_SUCCESS:
       return { ...state, isLoading: false };
     default:

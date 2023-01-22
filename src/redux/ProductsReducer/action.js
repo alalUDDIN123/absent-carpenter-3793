@@ -5,7 +5,8 @@ import {
   GET_PRODUCTS_SUCCESS,
   EDIT_PRODUCT_SUCCESS,
   SET_PRODUCTS_ROUTE,
-  SET_ALL_PRODUCTS_DATA
+  SET_ALL_PRODUCTS_DATA,
+  SET_SINGLE_PRODUCT_DATA 
 } from "./actionType";
 
 export const getProductsRequestAction = () => {
@@ -34,6 +35,11 @@ export const setAllProductsData = (data,route) => {
 
 export const editProductSuccess = () => {
   return { type: EDIT_PRODUCT_SUCCESS };
+};
+
+export const setSingleProduct = (payload) => {
+    
+  return { type: SET_SINGLE_PRODUCT_DATA ,payload};
 };
 
 // export const editProduct = (id, productData) => (dispatch) => {
