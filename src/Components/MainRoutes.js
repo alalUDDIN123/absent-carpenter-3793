@@ -14,6 +14,8 @@ import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
 import Footer from './Footer'
 import UserDetails from '../Pages/AdminPage/UserDetails'
+import OtpPgae from '../Pages/Authentication/OtpPage'
+import Delivery from '../Pages/Authentication/Delivery'
 
 
 
@@ -26,6 +28,8 @@ function MainRoutes() {
                 <Route path='/products/:key' element={<Products />}></Route>
                 <Route path='/products/:key/:id' element={<SingleProduct />}></Route>
                 <Route path='/cart' element={<CartPage />}></Route>
+                <Route path='/delivery' element={<Delivery />}></Route>
+                <Route path='/otp' element={<OtpPgae />}></Route>
                 <Route path='/checkout' element={<Checkout />}></Route>
                 <Route path='/admin/dashboard' element={<Admin />}></Route>
                 <Route path='/admin/users' element={<Users />}></Route>
