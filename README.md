@@ -21,6 +21,7 @@
 14. `npm i styled-components`
 15. `npm i react-slick`
 16. `npm i slick-carousel`
+17. `npm install react-image-magnify`
 
 
 
