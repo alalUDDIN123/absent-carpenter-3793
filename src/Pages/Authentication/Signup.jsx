@@ -26,55 +26,22 @@ import {
   FormLabel,
   Link,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
-import { getUser, addUser } from "../../redux/AppReducer/action";
-
-const InitialState = {
-  fullName: "",
-  email: "",
-  password: "",
-  avator: "",
-  phone: +910000000,
-};
-
 export function Signup() {
   const navigate = useNavigate();
-  const [state, setState] = useState(InitialState);
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    pass: "",
+  });
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const dispatch = useDispatch();
 
   const [error, setError] = useState({});
 
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
-  };
-
-  const handleSubmit = () => {
-    if (state.fullName === "" || state.email === "" || state.password === "") {
-      toast("Please add field");
-    } else {
-      const payload = {
-        fullname: state.fullName,
-        email: state.email,
-        password: state.password,
-        phone: 8083455346,
-        isAdmin: false,
-        avator:
-          "https://ca.slack-edge.com/T049YSPNG02-U04AXQGCH6G-146f35c95621-512",
-        cart: [],
-        purchase: [],
-        favorite: [],
-      };
-
-      dispatch(addUser(payload));
-      toast("Register Succuessfull");
-      dispatch(getUser());
-      onClose();
-    }
+  const handleSubmission = () => {
+   
   };
 
   return (
@@ -124,13 +91,16 @@ export function Signup() {
               </Box>
               <Box height="32rem" padding="35" width="24rem" color="#878787">
                 <FormControl>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel>Username</FormLabel>
                   <Input
                     variant="flushed"
                     placeholder="Enter your name"
-                    name="fullName"
-                    onChange={handleChange}
-                    value={state.fullName}
+                    onChange={(event) =>
+                      setValues((prev) => ({
+                        ...prev,
+                        name: event.target.value,
+                      }))
+                    }
                   />
                   <FormLabel marginTop="5">Email address</FormLabel>
                   <Input
@@ -138,9 +108,12 @@ export function Signup() {
                     required
                     // label="Email"
                     placeholder="Enter email address"
-                    onChange={handleChange}
-                    value={state.email}
-                    name="email"
+                    onChange={(event) =>
+                      setValues((prev) => ({
+                        ...prev,
+                        email: event.target.value,
+                      }))
+                    }
                   />
                   <Text color="red" fontSize="xs">
                     {error.email}
@@ -153,9 +126,12 @@ export function Signup() {
                     required
                     // label="Password"
                     placeholder="Enter password"
-                    onChange={handleChange}
-                    value={state.password}
-                    name="password"
+                    onChange={(event) =>
+                      setValues((prev) => ({
+                        ...prev,
+                        pass: event.target.value,
+                      }))
+                    }
                   />
                   <Text color="red" fontSize="xs">
                     {error.password}
@@ -179,7 +155,7 @@ export function Signup() {
                     color="white"
                     bg="#fb641b"
                     width="19.7rem"
-                    onClick={handleSubmit}
+                    onClick={handleSubmission}
                     disabled={submitButtonDisabled}
                   >
                     CONTINUE
@@ -196,7 +172,7 @@ export function Signup() {
                     width="19.7rem"
                     _hover={"#fff"}
                   >
-                    Existing User? Login
+                    Existing User? Login 
                   </Button>
                 </FormControl>
               </Box>
