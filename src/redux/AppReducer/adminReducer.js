@@ -1,13 +1,14 @@
-
+import * as types from "./actionTypes"
 const initialState={
     users:[]
 }
 
 export const userReducer=(state=initialState,{type,payload})=>{
     switch(type){
-        case "userRequest":
+        case types.GET_USER_SUCCESS:
             return{
                 ...state,
+                users:payload
             }
         
             default:return state

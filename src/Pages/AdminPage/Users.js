@@ -3,6 +3,7 @@ import LeftSide from './LeftSide'
 import style from "./admin.module.css"
 import userstyle from "./user.module.css"
 import { useNavigate } from "react-router-dom"
+import { useDispatch } from 'react-redux'
 
 import {
     Modal,
@@ -18,33 +19,77 @@ import {
     Button,
     Input
 } from '@chakra-ui/react'
-import axios from 'axios'
+
+
+import { addUser, DeleteUser, getUser } from '../../redux/AppReducer/action'
+
+const InitialState = {
+    fullName: "",
+    email: "",
+    password: "",
+    avator: "",
+    phone: +910000000,
+
+}
 
 function Users() {
     const [userData, setUserData] = useState([]);
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
-
+    const [state, setState] = useState(InitialState)
+    const [page, setPage] = useState(1)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const [term,setTerm]=useState("")
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setState({ ...state, [name]: value })
+    }
 
 
+    const handleSubmit = () => {
+        if (state.fullName === "" || state.email === "" || state.avator === "" || state.password === "") {
+            alert("Please Enter all field")
+        } else {
+            const payload = {
+                fullname: state.fullName,
+                email: state.email,
+                password: state.password,
+                phone: state.phone,
+                avator: state.avator,
+                cart: [],
+                purchase: [],
+                favorite: []
+            }
+
+            dispatch(addUser(payload))
+            dispatch(getUser())
+            onClose()
+        }
+
+    }
+
+    const DeleteHandle = (id) => {
+        if (window.confirm(`Are you sure want to delete this  user`)) {
+            dispatch(DeleteUser(id));
+            dispatch(getUser());
+        }
+    };
+
+    
+
+      
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users?_limit=7").then((res) => {
+        fetch(`http://localhost:8080/users?q=${term}&_page=${page}&_limit=7`).then((res) => {
             return res.json();
         }).then((resp) => {
             setUserData(resp)
         }).catch((err) => {
             console.log(err.message);
         })
-    }, [])
-
-    const handleSubmit = () => { }
-
-    const deleteUser = async (id) => {
-        let res = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
-        console.log(res)
-    }
+    }, [page,term])
 
 
 
@@ -61,7 +106,10 @@ function Users() {
                             <div className="card">
                                 <div className={userstyle['top-search']} >
                                     <div>
-                                        <input placeholder="Search user" className={userstyle.input} />
+                                        <input placeholder="Search user" 
+                                        className={userstyle.input} 
+                                        value={term}
+                                        onChange={(e)=>setTerm(e.target.value)} />
                                     </div>
                                     <div>
                                         <button onClick={onOpen}>Add User +</button>
@@ -84,25 +132,37 @@ function Users() {
                                             <FormControl isRequired>
                                                 <FormLabel>Full Name</FormLabel>
                                                 <Input ref={initialRef} placeholder='Enter full name'
-                                                    value="alal" name="fullName" />
+                                                    name="fullName"
+                                                    value={state.fullName}
+                                                    onChange={handleChange} />
                                             </FormControl>
 
                                             <FormControl mt={4} isRequired>
                                                 <FormLabel>Email</FormLabel>
                                                 <Input placeholder='Enter email'
-                                                    value="email" name="email" />
+                                                    name="email"
+                                                    value={state.email} onChange={handleChange} />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Password</FormLabel>
+                                                <Input placeholder='Enter password'
+                                                    name="password"
+                                                    value={state.password} onChange={handleChange} />
                                             </FormControl>
 
                                             <FormControl mt={4} isRequired>
                                                 <FormLabel>Phone</FormLabel>
                                                 <Input placeholder='Enter phone'
-                                                    value="phone" name="phone" />
+                                                    name="phone"
+                                                    value={state.phone} onChange={handleChange} />
                                             </FormControl>
 
                                             <FormControl mt={4} isRequired>
                                                 <FormLabel>Avator URL</FormLabel>
                                                 <Input placeholder='Put Url' type="url"
-                                                    value="vator" name="avator" />
+                                                    name="avator"
+                                                    value={state.avator} onChange={handleChange} />
                                             </FormControl>
                                         </ModalBody>
 
@@ -132,12 +192,12 @@ function Users() {
                                                 userData.map(item => (
                                                     <tr key={item.id}>
                                                         <td>{item.id}</td>
-                                                        <td>{item.username}</td>
+                                                        <td>{item.fullname}</td>
                                                         <td>{item.email}</td>
-                                                        <td>{item.address.zipcode}</td>
+                                                        <td>{item.phone}</td>
                                                         <td>
                                                             <a className="btn btn-success">Edit</a>
-                                                            <a className="btn btn-danger" onClick={() => deleteUser(item.id)} >Remove</a>
+                                                            <a className="btn btn-danger" onClick={() => DeleteHandle(item.id)} >Remove</a>
                                                             <a className="btn btn-primary" onClick={() => navigate(`/admin/users/${item.id}`)} >Details</a>
                                                         </td>
                                                     </tr>
@@ -146,9 +206,9 @@ function Users() {
                                         </tbody>
                                     </table>
                                     <div className={userstyle["pagination"]} >
-                                        <button>Prev</button>
-                                        <button>1</button>
-                                        <button>Next</button>
+                                        <button onClick={() => setPage(prev => prev - 1)} disabled={page == 1} >Prev</button>
+                                        <button>{page}</button>
+                                        <button onClick={() => setPage(prev => prev + 1)} >Next</button>
                                     </div>
                                 </div>
                             </div>
@@ -161,3 +221,4 @@ function Users() {
 }
 
 export default Users
+
