@@ -1,8 +1,10 @@
 import { Box, Button, HStack, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+
 import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
-//import Navbar from "../components/Navbar";
+
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const images = [
@@ -496,7 +498,7 @@ const Home = () => {
           </>
         ))}
       </SimpleGrid>
-      <Carousel />
+      {/* <Carousel /> */}
       <Box mt={12}>
         <Image
           w={"100%"}
