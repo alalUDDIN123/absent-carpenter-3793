@@ -35,6 +35,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
+import { Signup } from "../Pages/Authentication/Signup";
 
 const initiaState = {
   password: "",
@@ -62,6 +63,8 @@ export default function Navbar() {
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
   const dispatch = useDispatch()
+  const [change, setChange] = useState(true);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -95,6 +98,7 @@ export default function Navbar() {
 
   return (
     <>
+      {/* {change && } */}
       <Box
         bg={useColorModeValue("#2874f0", "gray.900")}
         px={{ base: 0, sm: 3, md: 5, lg: 24 }}
@@ -239,7 +243,7 @@ export default function Navbar() {
                         width="19.7rem"
                         _hover={"#fff"}
                       >
-                        Don not have an account ? Register
+                        Don not have an account ? {<Signup onClose={onClose} />}
                       </Button>
                     </FormControl>
                   </Box>

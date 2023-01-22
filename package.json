@@ -38,7 +38,7 @@
   "scripts": {
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "server":"json-server --watch db.json --port 8080"
+    "server": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {
     "extends": [
