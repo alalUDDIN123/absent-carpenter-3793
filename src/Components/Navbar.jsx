@@ -36,6 +36,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
 import { Signup } from "../Pages/Authentication/Signup";
+import { useNavigate } from "react-router-dom";
 
 const initiaState = {
   password: "",
@@ -62,6 +63,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
+  const navigate = useNavigate();
   const dispatch = useDispatch()
   const [change, setChange] = useState(true);
 
