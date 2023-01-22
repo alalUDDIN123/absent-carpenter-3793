@@ -35,7 +35,6 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
-import { Signup } from "../Pages/Authentication/Signup";
 import { useNavigate } from "react-router-dom";
 
 const initiaState = {
@@ -64,9 +63,12 @@ export default function Navbar() {
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
   const navigate = useNavigate();
+  const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
-  const [change, setChange] = useState(true);
+  const [change, setChange]  =  useState(true);
 
+  const [loginUserName, setLoginUserName] = useState("")
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -82,12 +84,17 @@ export default function Navbar() {
 
     let filter = user.filter((el) => el.password === payload.password && el.email === payload.email)
     if (filter.length > 0) {
+      const adminKeys = filter.map(user => user.isAdmin);
+      if(adminKeys[0]===true){
+        setAdminAccess(prev=>!prev)
       
+      };
+      setLoginUserName(filter[0].fullname)
       toast("Login Successful")
     } else {
       toast("Accoun not found")
     }
-
+     // console.log("username",filter[0].fullname);
     onClose()
   }
 
@@ -98,10 +105,10 @@ export default function Navbar() {
   }, [user.length])
 
   // console.log(user)
+  // console.log(adminAccess)
 
   return (
     <>
-      {/* {change && } */}
       <Box
         bg={useColorModeValue("#2874f0", "gray.900")}
         px={{ base: 0, sm: 3, md: 5, lg: 24 }}
@@ -116,8 +123,8 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive" 
-              onClick={()=>navigate("/")} >Masai-Kart</Text>
+              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive"
+                onClick={() => navigate("/")} >Masai-Kart</Text>
               <Image
                 w="30px"
                 h="30px"
@@ -146,9 +153,11 @@ export default function Navbar() {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >Login</Text>
+              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >{loginUserName?`Hi-${loginUserName}`:"Login"}</Text>
               <Text cursor={'pointer'} color={'white'} >Become A Seller</Text>
               <Text cursor={'pointer'} color={'white'} >More</Text>
+              {adminAccess && <Button onClick={()=>navigate("/admin/dashboard")} >Admin Panel</Button>}
+              
             </HStack>
           </HStack>
 
@@ -242,7 +251,7 @@ export default function Navbar() {
                         width="19.7rem"
                         _hover={"#fff"}
                       >
-                        Don not have an account ? {<Signup onClose={onClose} />}
+                        Don not have an account ? Register
                       </Button>
                     </FormControl>
                   </Box>
