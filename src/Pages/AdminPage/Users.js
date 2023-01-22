@@ -59,6 +59,7 @@ function Users() {
                 password: state.password,
                 phone: state.phone,
                 avator: state.avator,
+                isAdmin: false,
                 cart: [],
                 purchase: [],
                 favorite: []
