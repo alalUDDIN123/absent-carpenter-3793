@@ -31,3 +31,20 @@ export const getProductData = (path, filter) => async (dispatch) => {
     dispatch(getProductsFailureAction());
   }
 };
+
+export const postProductData = (path, data) => async (dispatch) => {
+  // console.log(filter)
+
+  try {
+    dispatch(getProductsRequestAction());
+
+    if (typeof data === "object") {
+      let res = await axios.post(`${baseUrl}${path}`, data)
+      return await res.data;
+   
+  }
+ } catch (err) {
+    console.log(err.message);
+    dispatch(getProductsFailureAction());
+  }
+};

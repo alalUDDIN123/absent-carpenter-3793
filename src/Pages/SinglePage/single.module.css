@@ -1,14 +1,19 @@
 .onemain{
-    /* border: 2px solid red; */
+    border: 2px solid red;
     display: flex;
-    margin: 30px 2% 5px 2%;
-    background-color: white;
+    margin: 20px 2% 5px 2%;
+    background-color: white; 
     padding: 1%;
+    gap:5px
 }
 .leftbox{
     width: 40%;
-    /* border: 10px solid rgb(186, 186, 45); */
+  
     display: flex;
+    height: 440px;
+    text-align: center;
+    
+ 
 }
 .rightbox{
     width: 57%;
@@ -17,9 +22,11 @@
     
 }
 .imgdivbox{
-    
+    justify-content: center;
     width:100%;
-    border: 0.5px solid rgba(128, 128, 128, 0.234)
+    border: 0.5px solid rgba(128, 128, 128, 0.234);
+    border-left-style: none
+    
 }
 .buttbox{
     display: flex;
@@ -27,6 +34,8 @@
     /* border: 3px solid green; */
     justify-content: space-evenly;
     padding: 5px 20%;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .verticalline{
 width: 20%;
@@ -35,6 +44,7 @@ height: 100%;
 }
 .rightbox {
     text-align: left;
+    color: #212121;
     
 }
 .rightbox div{
@@ -84,10 +94,16 @@ height: 100%;
 .smallimg{
     width: 90%;
     padding: 5%;
+    border: 1px solid lightgrey;
+  
+
 }
 .offer{
     display: flex;
     align-items: center;
     gap: 5px;
-    
+   
+}
+.smallimg:hover{
+    border:3px solid #2874f0
 }
