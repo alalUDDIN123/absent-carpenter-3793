@@ -181,40 +181,30 @@ const ProductCard = (product) => {
     id,
     image1,
     name,
-    brand,
-    rating,
     ratedCount,
     review,
     basicSpecification,
     _customer_ratings,
-    internal_storage,
+
     display,
-    screen_size,
+
     camera,
-    primary_camera,
-    secondary_camera,
+
     _battery_capacity,
     processorSpecification,
-    processor_brand,
-    speciality,
-    network_type,
-    sim_type,
-    purchasePrice,
+
     discountPrice,
     sellPrice,
     _discount,
-    _diliveryMethod,
+
     assured,
     offer1,
-    offer2,
+
     waranty,
     diliveryBy,
     topDiscount,
     including,
-    dealers,
-    postedQuantity,
-    remainQuantity,
-    profit,
+
   } = product;
 
   const handlePath=()=>{
@@ -231,7 +221,7 @@ const ProductCard = (product) => {
         justify="space-between"
       
       >
-        <GridItem p="10px 30px" colSpan={1} h="250px">
+        <GridItem p="10px 30px" colSpan={1} >
           <Image src={image1} alt={id} h="100%" />
         </GridItem>
         <GridItem colSpan={3}>

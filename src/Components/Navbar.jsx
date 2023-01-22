@@ -113,7 +113,7 @@ export default function Navbar() {
         bg={useColorModeValue("#2874f0", "gray.900")}
         px={{ base: 0, sm: 3, md: 5, lg: 24 }}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"} >
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -123,11 +123,11 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive"
+              <Text fontSize="12px" color="white" fontWeight="bold" fontFamily="cursive"
                 onClick={() => navigate("/")} >Masai-Kart</Text>
               <Image
                 w="30px"
-                h="30px"
+                h="20px"
                 src="./Masai-Kart.png"
                 alt="kart"
               />

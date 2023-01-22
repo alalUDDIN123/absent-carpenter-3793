@@ -1,10 +1,11 @@
 import { Box, Button, HStack, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Carousel from './Carousel';
 //import Navbar from "../components/Navbar";
 
 const Home = () => {
+  const navigate=useNavigate()
   const images = [
     {
       image:
@@ -582,7 +583,7 @@ const Home = () => {
       <SimpleGrid w="full" columns={5} spacing={5}>
         <VStack justifyContent='center' alignItems={'center'}>
           <Text as={"b"}>Mobiles</Text>
-          <Button backgroundColor={'#2874f0'} color='white' px='6'>View All</Button>
+          <Button backgroundColor={'#2874f0'} color='white' px='6' onClick={()=>navigate("/products/phones")} >View All</Button>
         </VStack>
         {Mobiles?.map((el, i) => (
           <VStack mt={12} w={"full"} key={i}>
@@ -619,7 +620,7 @@ const Home = () => {
       <SimpleGrid w="full" columns={6} spacing={5}>
         <VStack justifyContent='center' alignItems={'center'}>
           <Text as={"b"}>Electronics</Text>
-          <Button backgroundColor={'#2874f0'} color='white' px='6'>View All</Button>
+          <Button backgroundColor={'#2874f0'} color='white' px='6' onClick={()=>navigate("/products/laptops")} >View All</Button>
         </VStack>
         {Electronics?.map((el, i) => (
           <VStack mt={12} w={"full"} key={i}>
