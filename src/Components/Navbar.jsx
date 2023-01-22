@@ -35,11 +35,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
-<<<<<<< HEAD
 import { Signup } from "../Pages/Authentication/Signup";
-=======
-import { useNavigate } from "react-router-dom";
->>>>>>> b41ae0ff9262af12fda6e3e50e65aa0d1ff6161e
 
 const initiaState = {
   password: "",
@@ -67,12 +63,8 @@ export default function Navbar() {
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
   const dispatch = useDispatch()
-<<<<<<< HEAD
   const [change, setChange] = useState(true);
 
-=======
-  const navigate=useNavigate()
->>>>>>> b41ae0ff9262af12fda6e3e50e65aa0d1ff6161e
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
