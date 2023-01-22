@@ -1,10 +1,11 @@
 import React from 'react'
+import MuiTable from './MuiTable'
 
 function Report() {
   return (
-    <div>
-      Report
-    </div>
+    <>
+    Good boy
+    </>
   )
 }
 

@@ -1,104 +1,224 @@
 import React, { useEffect, useState } from 'react'
 import LeftSide from './LeftSide'
 import style from "./admin.module.css"
-import { Link, useNavigate } from 'react-router-dom';
+import userstyle from "./user.module.css"
+import { useNavigate } from "react-router-dom"
+import { useDispatch } from 'react-redux'
+
+import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    FormControl,
+    FormLabel,
+    Button,
+    Input
+} from '@chakra-ui/react'
+
+
+import { addUser, DeleteUser, getUser } from '../../redux/AppReducer/action'
+
+const InitialState = {
+    fullName: "",
+    email: "",
+    password: "",
+    avator: "",
+    phone: +910000000,
+
+}
 
 function Users() {
+    const [userData, setUserData] = useState([]);
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
+    const [state, setState] = useState(InitialState)
+    const [page, setPage] = useState(1)
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const [term,setTerm]=useState("")
 
-  const [empdata, empdatachange] = useState(null);
-  const navigate = useNavigate();
-
-  const LoadDetail = (id) => {
-      navigate("/employee/detail/" + id);
-  }
-  const LoadEdit = (id) => {
-      navigate("/employee/edit/" + id);
-  }
-  const Removefunction = (id) => {
-      if (window.confirm('Do you want to remove?')) {
-          fetch("https://jsonplaceholder.typicode.com/todos" + id, {
-              method: "DELETE"
-          }).then((res) => {
-              alert('Removed successfully.')
-              window.location.reload();
-          }).catch((err) => {
-              console.log(err.message)
-          })
-      }
-  }
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setState({ ...state, [name]: value })
+    }
 
 
+    const handleSubmit = () => {
+        if (state.fullName === "" || state.email === "" || state.avator === "" || state.password === "") {
+            alert("Please Enter all field")
+        } else {
+            const payload = {
+                fullname: state.fullName,
+                email: state.email,
+                password: state.password,
+                phone: state.phone,
+                avator: state.avator,
+                cart: [],
+                purchase: [],
+                favorite: []
+            }
+
+            dispatch(addUser(payload))
+            dispatch(getUser())
+            onClose()
+        }
+
+    }
+
+    const DeleteHandle = (id) => {
+        if (window.confirm(`Are you sure want to delete this  user`)) {
+            dispatch(DeleteUser(id));
+            dispatch(getUser());
+        }
+    };
+
+    
+
+      
+    useEffect(() => {
+        fetch(`http://localhost:8080/users?q=${term}&_page=${page}&_limit=7`).then((res) => {
+            return res.json();
+        }).then((resp) => {
+            setUserData(resp)
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, [page,term])
 
 
-  useEffect(() => {
-      fetch("https://jsonplaceholder.typicode.com/todos?_limit=10").then((res) => {
-          return res.json();
-      }).then((resp) => {
-          empdatachange(resp);
-      }).catch((err) => {
-          console.log(err.message);
-      })
-  }, [])
 
-  // console.log(empdata);
 
-  return (
-    <>
-    <div className={style["main-wrapper"]} >
-        <div className={style["container-wrapper"]}>
 
-         <LeftSide />
+    return (
+        <>
+            <div className={style["main-wrapper"]} >
+                <div className={style["container-wrapper"]}>
+                    <LeftSide />
+                    {/* Right Side bar */}
+                    <div>
+                        <div className={userstyle["main-userTable"]}>
+                            <div className="card">
+                                <div className={userstyle['top-search']} >
+                                    <div>
+                                        <input placeholder="Search user" 
+                                        className={userstyle.input} 
+                                        value={term}
+                                        onChange={(e)=>setTerm(e.target.value)} />
+                                    </div>
+                                    <div>
+                                        <button onClick={onOpen}>Add User +</button>
+                                    </div>
+                                </div>
 
-          {/* Right Side bar */}
-          <div>
-          <div className="container">
-            <div className="card">
-                <div className="card-title">
-                    <h2>Employee Listing</h2>
-                </div>
-                <div className="card-body">
-                    <div className="divbtn">
-                        <Link to="employee/create" className="btn btn-success">Add New (+)</Link>
+
+                                {/* Modal Box */}
+                                <Modal
+                                    initialFocusRef={initialRef}
+                                    finalFocusRef={finalRef}
+                                    isOpen={isOpen}
+                                    onClose={onClose}
+                                >
+                                    <ModalOverlay />
+                                    <ModalContent>
+                                        <ModalHeader>Add New User</ModalHeader>
+                                        <ModalCloseButton />
+                                        <ModalBody pb={6}>
+                                            <FormControl isRequired>
+                                                <FormLabel>Full Name</FormLabel>
+                                                <Input ref={initialRef} placeholder='Enter full name'
+                                                    name="fullName"
+                                                    value={state.fullName}
+                                                    onChange={handleChange} />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Email</FormLabel>
+                                                <Input placeholder='Enter email'
+                                                    name="email"
+                                                    value={state.email} onChange={handleChange} />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Password</FormLabel>
+                                                <Input placeholder='Enter password'
+                                                    name="password"
+                                                    value={state.password} onChange={handleChange} />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Phone</FormLabel>
+                                                <Input placeholder='Enter phone'
+                                                    name="phone"
+                                                    value={state.phone} onChange={handleChange} />
+                                            </FormControl>
+
+                                            <FormControl mt={4} isRequired>
+                                                <FormLabel>Avator URL</FormLabel>
+                                                <Input placeholder='Put Url' type="url"
+                                                    name="avator"
+                                                    value={state.avator} onChange={handleChange} />
+                                            </FormControl>
+                                        </ModalBody>
+
+                                        <ModalFooter>
+                                            <Button colorScheme='blue' mr={3} onClick={handleSubmit} >
+                                                Submit
+                                            </Button>
+                                            <Button onClick={onClose}>Cancel</Button>
+                                        </ModalFooter>
+                                    </ModalContent>
+                                </Modal>
+
+
+                                <div className="card-body">
+                                    <table className="table table-bordered">
+                                        <thead className="bg-dark text-white">
+                                            <tr>
+                                                <td>ID</td>
+                                                <td>Name</td>
+                                                <td>Email</td>
+                                                <td>Phone</td>
+                                                <td>Action</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {userData &&
+                                                userData.map(item => (
+                                                    <tr key={item.id}>
+                                                        <td>{item.id}</td>
+                                                        <td>{item.fullname}</td>
+                                                        <td>{item.email}</td>
+                                                        <td>{item.phone}</td>
+                                                        <td>
+                                                            <a className="btn btn-success">Edit</a>
+                                                            <a className="btn btn-danger" onClick={() => DeleteHandle(item.id)} >Remove</a>
+                                                            <a className="btn btn-primary" onClick={() => navigate(`/admin/users/${item.id}`)} >Details</a>
+                                                        </td>
+                                                    </tr>
+                                                ))
+                                            }
+                                        </tbody>
+                                    </table>
+                                    <div className={userstyle["pagination"]} >
+                                        <button onClick={() => setPage(prev => prev - 1)} disabled={page == 1} >Prev</button>
+                                        <button>{page}</button>
+                                        <button onClick={() => setPage(prev => prev + 1)} >Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <table className="table table-bordered">
-                        <thead className="bg-dark text-white">
-                            <tr>
-                                <td>ID</td>
-                                <td>Name</td>
-                                <td>Email</td>
-                                <td>Phone</td>
-                                <td>Action</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            {empdata &&
-                                empdata.map(item => (
-                                    <tr key={item.id}>
-                                        <td>{item.id}</td>
-                                        <td>Users</td>
-                                        <td>users@gmail.com</td>
-                                        <td>+91 56564875</td>
-                                        <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
-                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remove</a>
-                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Details</a>
-                                        </td>
-                                    </tr>
-                                ))
-                            }
-
-                        </tbody>
-
-                    </table>
                 </div>
             </div>
-        </div>
-          </div>
-
-        </div>
-      </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default Users
+
