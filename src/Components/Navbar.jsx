@@ -63,14 +63,14 @@ export default function Navbar() {
             <HStack display={"flex"} py="2">
               <Image
                 w="80px"
-                h="30px"
-                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                h="37px"
+                src="./Masai-Kart.png"
                 alt="err"
               />
               <Image
                 w="30px"
                 h="30px"
-                src="https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-transparent-png-download-0.png"
+                src="./Masai-Kart.png"
                 alt="err"
               />
             </HStack>
