@@ -33,14 +33,15 @@ import {
 import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../redux/AppReducer/action";
 import { useNavigate } from "react-router-dom";
+import { Signup } from "../Pages/Authentication/Signup";
 
 const initiaState = {
   password: "",
-  email: ""
-}
+  email: "",
+};
 
 const Links = ["Login", "Become A Seller", "More"];
 const NavLink = ({ children }) => (
@@ -60,39 +61,44 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [state, setState] = useState(initiaState)
-  const user = useSelector(store => store.userReducer.users)
-  const dispatch = useDispatch()
-  const navigate=useNavigate()
+  const [state, setState] = useState(initiaState);
+  const user = useSelector((store) => store.userReducer.users);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [loginUserName,setLoginUserName]=useState("")
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setState({ ...state, [name]: value })
-  }
-
+    setState({ ...state, [name]: value });
+  };
 
   const handleSubmit = () => {
-
     const payload = {
       email: state.email,
-      password: state.password
-    }
+      password: state.password,
+    };
 
-    let filter = user.filter((el) => el.password === payload.password && el.email === payload.email)
-    if (filter.length > 0) {
+    let filter = user.filter(
+      (el) => el.password === payload.password && el.email === payload.email
       
-      toast("Login Successful")
+    );
+    console.log("current login",filter);
+    if (filter.length > 0) {
+      setLoginUserName(filter[0].fullname)
+      
+      toast("Login Successful");
     } else {
-      toast("Accoun not found")
+      toast("Account not found");
     }
-
-    onClose()
-  }
+    // console.log("username",filter[0].fullname);
+    onClose();
+  };
 
   useEffect(() => {
     if (user.length === 0) {
-      dispatch(getUser())
+      dispatch(getUser());
     }
-  }, [user.length])
+  }, [user.length]);
 
   // console.log(user)
 
@@ -112,14 +118,16 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive" 
-              onClick={()=>navigate("/")} >Masai-Kart</Text>
-              <Image
-                w="30px"
-                h="30px"
-                src="./Masai-Kart.png"
-                alt="kart"
-              />
+              <Text
+                fontSize="25px"
+                color="white"
+                fontWeight="bold"
+                fontFamily="cursive"
+                onClick={() => navigate("/")}
+              >
+                Masai-Kart
+              </Text>
+              <Image w="30px" h="30px" src="./Masai-Kart.png" alt="kart" />
             </HStack>
             <ToastContainer />
             <Box display={{ base: "none", md: "none", lg: "block" }}>
@@ -142,12 +150,17 @@ export default function Navbar() {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              <Text cursor={'pointer'} color={'white'} onClick={onOpen} >Login</Text>
-              <Text cursor={'pointer'} color={'white'} >Become A Seller</Text>
-              <Text cursor={'pointer'} color={'white'} >More</Text>
+              <Text cursor={"pointer"} color={"white"} onClick={onOpen}>
+                {loginUserName?`Hi-${loginUserName}`:"Login"}
+              </Text>
+              <Text cursor={"pointer"} color={"white"}>
+                Become A Seller
+              </Text>
+              <Text cursor={"pointer"} color={"white"}>
+                More
+              </Text>
             </HStack>
           </HStack>
-
 
           <Modal isOpen={isOpen} onClose={onClose} size="2xl" padding="0px">
             <ModalOverlay />
@@ -173,7 +186,6 @@ export default function Navbar() {
                       fontSize="1xl"
                     >
                       Login with email and password
-
                     </Text>
                     <Image
                       marginTop="10rem"
@@ -181,9 +193,13 @@ export default function Navbar() {
                       alt="image"
                     />
                   </Box>
-                  <Box height="32rem" padding="35" width="24rem" color="#878787">
+                  <Box
+                    height="32rem"
+                    padding="35"
+                    width="24rem"
+                    color="#878787"
+                  >
                     <FormControl>
-
                       <FormLabel marginTop="5">Email address</FormLabel>
                       <Input
                         variant="flushed"
@@ -194,9 +210,7 @@ export default function Navbar() {
                         name="email"
                         onChange={handleChange}
                       />
-                      <Text color="red" fontSize="xs">
-
-                      </Text>
+                      <Text color="red" fontSize="xs"></Text>
                       <FormLabel marginTop="5">Password</FormLabel>
                       <Input
                         // color="black"
@@ -208,11 +222,8 @@ export default function Navbar() {
                         value={state.password}
                         name="password"
                         onChange={handleChange}
-
                       />
-                      <Text color="red" fontSize="xs">
-
-                      </Text>
+                      <Text color="red" fontSize="xs"></Text>
 
                       <Button
                         borderRadius="0.5"
@@ -224,7 +235,6 @@ export default function Navbar() {
                         onClick={handleSubmit}
                       >
                         CONTINUE
-
                       </Button>
                       <Button
                         marginTop="4"
@@ -238,7 +248,7 @@ export default function Navbar() {
                         width="19.7rem"
                         _hover={"#fff"}
                       >
-                        Don not have an account ? Register
+                        Don not have an account ? <Signup onClose={onClose} />
                       </Button>
                     </FormControl>
                   </Box>
@@ -246,10 +256,6 @@ export default function Navbar() {
               </ModalBody>
             </ModalContent>
           </Modal>
-
-
-
-
 
           <Flex alignItems={"center"}>
             <Menu>
@@ -260,7 +266,9 @@ export default function Navbar() {
                 cursor={"pointer"}
                 minW={0}
               >
-                <Box><HiOutlineShoppingCart size='2.2rem' color='white' /></Box>
+                <Box>
+                  <HiOutlineShoppingCart size="2.2rem" color="white" />
+                </Box>
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
@@ -275,9 +283,7 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-
               {Links.map((link) => (
-
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </Stack>
