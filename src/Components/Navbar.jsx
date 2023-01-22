@@ -35,6 +35,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
+import { useNavigate } from "react-router-dom";
 
 const initiaState = {
   password: "",
@@ -62,6 +63,7 @@ export default function Navbar() {
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
   const dispatch = useDispatch()
+  const navigate=useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -109,12 +111,8 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <HStack display={"flex"} py="2">
-              <Image
-                w="80px"
-                h="37px"
-                src="./Masai-Kart.png"
-                alt="Masai-Kart"
-              />
+              <Text fontSize="25px" color="white" fontWeight="bold" fontFamily="cursive" 
+              onClick={()=>navigate("/")} >Masai-Kart</Text>
               <Image
                 w="30px"
                 h="30px"
