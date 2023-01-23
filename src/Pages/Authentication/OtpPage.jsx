@@ -1,4 +1,4 @@
-import { InfoIcon } from "@chakra-ui/icons";
+import { CheckCircleIcon, InfoIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -11,12 +11,12 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function OtpPgae() {
   const [realOtp, setRealOtp] = useState("");
   const [state, setState] = useState(0);
-  const [forwardCongo, setForwardCongo] = useState(false);
+  const navigate = useNavigate();
 
   const toast = useToast();
 
@@ -42,8 +42,25 @@ function OtpPgae() {
 
   const handelSubmitOtp = () => {
     if (realOtp == state) {
-      setForwardCongo(true);
-      toast("Order Placed Successfully");
+      toast({
+        position: "top",
+        render: () => (
+          <Box
+            color="white"
+            rounded={"10"}
+            p={3}
+            bg="green"
+            display={"flex"}
+            alignItems="center"
+          >
+            <CheckCircleIcon />
+            <Text ml="2" fontWeight={"bold"} color="white">
+              Order Placed Successfully !!!
+            </Text>
+          </Box>
+        ),
+      });
+      navigate("/")
     } else {
       toast({
         position: "top",
@@ -95,7 +112,7 @@ function OtpPgae() {
           </PinInput>
         </HStack>
         <Button mt="-10" onClick={handelSubmitOtp}>
-          <Link to={forwardCongo ? "/" : ""}>Submit</Link>
+          Submit
         </Button>
       </Box>
     </Box>

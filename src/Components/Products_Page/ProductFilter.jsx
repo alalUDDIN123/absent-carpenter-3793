@@ -174,7 +174,7 @@ export const ProductFilter = ({ searchObject, setSearchObject, data }) => {
               </Flex>
               {(show === filterKey || searchObject[filterKey] || i == first) && (
                 <VStack p="10px" alignItems="stretch">
-                  {Object.keys(filterKeys[filterKey]).map((name, i) => (
+                 {Object.keys(filterKeys[filterKey]).filter((name, i) =>name!=="").map((name,i)=> (
                     <Flex
                       justifyContent="space-between"
                       onChange={() => handleChange(filterKey, name)}

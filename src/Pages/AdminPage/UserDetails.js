@@ -11,7 +11,7 @@ function UserDetails() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:8080/users/${id}`).then((res) => {
+        fetch(`https://masai-cart-server.vercel.app/users/${id}`).then((res) => {
             return res.json();
         }).then((resp) => {
             setUser(resp)

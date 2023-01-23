@@ -83,7 +83,7 @@ function Users() {
 
       
     useEffect(() => {
-        fetch(`http://localhost:8080/users?q=${term}&_page=${page}&_limit=7`).then((res) => {
+        fetch(`https://masai-cart-server.vercel.app/users?q=${term}&_page=${page}&_limit=7`).then((res) => {
             return res.json();
         }).then((resp) => {
             setUserData(resp)

@@ -38,7 +38,7 @@ export const editProductSuccess = () => {
 };
 
 export const setSingleProduct = (payload) => {
-    
+    console.log("payload",payload);
   return { type: SET_SINGLE_PRODUCT_DATA ,payload};
 };
 
