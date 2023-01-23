@@ -101,5 +101,5 @@
 1. Landing page
   - Can see all users who are registered
   - Can see all orders
-  - Apply (Crud peration for products)
+  - Apply (Crud operation for products)
 
