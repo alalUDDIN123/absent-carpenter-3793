@@ -6,7 +6,8 @@ import {
   setCurruntRoute,
 } from "./redux/ProductsReducer/action";
 
-const baseUrl = " http://localhost:8080";
+const baseUrl = "https://masai-cart-server.vercel.app";
+console.log(baseUrl);
 
 export const getProductData = (path, filter) => async (dispatch) => {
   // console.log(filter)
@@ -17,6 +18,7 @@ export const getProductData = (path, filter) => async (dispatch) => {
     if (typeof filter === "object") {
       let res = await axios.get(`${baseUrl}${path}`, { params: { ...filter } });
       //console.log(res);
+      console.log(baseUrl);
       dispatch(setCurruntRoute(path.replace("/", "")));
       return await res.data;
     } else {
@@ -25,6 +27,7 @@ export const getProductData = (path, filter) => async (dispatch) => {
 
       const route = path.replace("/", "");
       dispatch(setAllProductsData(data, route));
+      return data;
     }
   } catch (err) {
     console.log(err.message);

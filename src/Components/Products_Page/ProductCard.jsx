@@ -217,11 +217,11 @@ const ProductCard = (product) => {
     <Box p="20px">
       <Grid
         fontSize="sm"
-        templateColumns="repeat(6,1fr)"
+        templateColumns="repeat(7,1fr)"
         justify="space-between"
-      
+        gap="20px"
       >
-        <GridItem p="10px 30px" colSpan={1} >
+        <GridItem p="10px 30px" colSpan={2} >
           <Image src={image1} alt={id} h="100%" />
         </GridItem>
         <GridItem colSpan={3}>
@@ -246,12 +246,12 @@ const ProductCard = (product) => {
 
             </VStack> */}
           <UnorderedList>
-            <ListItem>{basicSpecification}</ListItem>
-            <ListItem>{display}</ListItem>
-            <ListItem>{camera}</ListItem>
-            <ListItem>{_battery_capacity}</ListItem>
-            <ListItem>{processorSpecification}</ListItem>
-            {waranty&&<ListItem>{waranty}</ListItem>}
+           {basicSpecification && <ListItem>{basicSpecification}</ListItem>}
+          {display &&  <ListItem>{display}</ListItem>}
+           {camera && <ListItem>{camera}</ListItem>}
+           {_battery_capacity && <ListItem>{_battery_capacity}</ListItem>}
+            {processorSpecification && <ListItem>{processorSpecification}</ListItem>}
+            {waranty && <ListItem>{waranty}</ListItem>}
           </UnorderedList>
         </GridItem>
 

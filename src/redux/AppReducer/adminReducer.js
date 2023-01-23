@@ -10,6 +10,11 @@ export const userReducer=(state=initialState,{type,payload})=>{
                 ...state,
                 users:payload
             }
+        case types.ADD_USER_SUCCESS:
+            return{
+                ...state,
+                users:[...state.users,payload]
+            }
         
             default:return state
     }

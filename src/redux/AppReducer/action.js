@@ -9,7 +9,7 @@ import * as types from "./actionTypes"
 export const getUser = () => async (dispatch) => {
 
     try {
-        let data = await axios.get(`http://localhost:8080/users`)
+        let data = await axios.get(`https://masai-cart-server.vercel.app/users`)
         
         dispatch({ type: types.GET_USER_SUCCESS, payload: data.data })
     } catch (error) {
@@ -24,7 +24,7 @@ export const getUser = () => async (dispatch) => {
 export const addUser = (payload) => async (dispatch) => {
    
     try {
-        let data = await axios.post(`http://localhost:8080/users`, payload)
+        let data = await axios.post(`https://masai-cart-server.vercel.app/users`, payload)
         dispatch({ type:types.ADD_USER_SUCCESS, payload: data.data })
     } catch (error) {
         console.log(error)
@@ -36,7 +36,7 @@ export const addUser = (payload) => async (dispatch) => {
 export const UpdateUser = (id, payload) => async (dispatch) => {
 
     try {
-        let data = await axios.patch(`http://localhost:8080/users/${id}`, payload)
+        let data = await axios.patch(`https://masai-cart-server.vercel.app/users/${id}`, payload)
         dispatch({ type: types.EDIT_USER_SUCCESS, payload: data.data })
     } catch (error) {
         console.log(error)
@@ -48,7 +48,7 @@ export const UpdateUser = (id, payload) => async (dispatch) => {
 export const DeleteUser = (id) => async (dispatch) => {
 
     try {
-        let data = await axios.delete(`http://localhost:8080/users/${id}`)
+        let data = await axios.delete(`https://masai-cart-server.vercel.app/users/${id}`)
         dispatch({ type: types.DELETE_USER_SUCCESS, payload: data.data })
     } catch (error) {
         console.log(error)

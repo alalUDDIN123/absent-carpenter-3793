@@ -33,7 +33,7 @@ export const reducer = (state = initialState, { type, payload }) => {
     case SET_ALL_PRODUCTS_DATA:
       return { ...state, allProducts:{...state.allProducts,[payload.route]:payload.data} };
       case SET_SINGLE_PRODUCT_DATA:
-      return { ...state, singleProduct: payload };
+      return { ...state, singleProduct: payload,isLoading:false };
     case EDIT_PRODUCT_SUCCESS:
       return { ...state, isLoading: false };
     default:
