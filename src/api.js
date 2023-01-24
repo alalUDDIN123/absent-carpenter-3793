@@ -6,7 +6,7 @@ import {
   setCurruntRoute,
 } from "./redux/ProductsReducer/action";
 
-const baseUrl = "https://masai-cart-server.vercel.app";
+const baseUrl = process.env.REACT_APP_JSON_SERVER_URL;
 console.log(baseUrl);
 
 export const getProductData = (path, filter) => async (dispatch) => {

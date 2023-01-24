@@ -493,7 +493,7 @@ const Home = () => {
             <VStack w={"full"} key={i}>
               <Image w="80px" src={el.image} alt="err" />
               <Text fontSize={"xs"} fontWeight="bold">
-                <a href={`/products${el.href}`} target="_blank">{el.text}</a>
+                <a href={`/products${el.href}`} >{el.text}</a>
               </Text>
             </VStack>
           </>
