@@ -72,6 +72,7 @@ export function Signup() {
       dispatch(addUser(payload));
       dispatch(getUser());
       onClose();
+      window.location.reload("/")
     }
   };
 
