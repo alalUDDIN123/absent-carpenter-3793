@@ -25,7 +25,6 @@
 
 
 
-## Day 2
 
 ![](./Admin%20Panel%20Structure.png)
 
