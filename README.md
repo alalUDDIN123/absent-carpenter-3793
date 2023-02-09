@@ -35,6 +35,29 @@
 3. Hari Singh Bisht
 4. Madhukar Kakade
 5. Ruchi Priya Kumari
+---
+
+## About Masai Cart
+<b>Masai cart is a e-commerce website where user can buy various types of products.
+</b>
+<br/>
+
+## Features of the site
+
+1. Dynamic data 
+2. Filtering with various way
+3. Details of a particualr product
+4. Add to cart 
+5. Payments
+6. Admin Dashboard
+    - See All products
+    - Orders
+    - Selling
+    - Add product and user
+    - Modify or update either product or user
+---
+
+<b> See live:</b> https://masai-kart.netlify.app/
  
 ## Folder Structure 📂
 
