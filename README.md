@@ -3,29 +3,6 @@
  - Project Code : absent-carpenter-3793
  - IA : Manoj Attri
 
-## Dependencies Installed 
-
-1. `npm i axios`
-2. `npm i react-router-dom`
-3. `npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion`
-4. `npm i @chakra-ui/icons`
-5. `npm install react-icons --save`
-6. `npm i json-server`
-7. `npm i redux react-redux redux-thunk`
-8. `npm install react-icons --save`
-9. `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
-10. `npm install @mui/icons-material`
-11. `npm install chart.js`
-12. `npm i react-chartjs-2`
-13. `npm install victory-pie --save`
-14. `npm i styled-components`
-15. `npm i react-slick`
-16. `npm i slick-carousel`
-17. `npm install react-image-magnify`
-
-
-
-
 ![](./Admin%20Panel%20Structure.png)
 
 ### Let's have a meet with team members
@@ -87,7 +64,7 @@
     - hero section
     - products section 
     - footer
-
+ <img src="https://i.postimg.cc/XNFbpyPH/Screenshot-34.png" alt="home" />
 ---
 
 2. Main products page : 👍 (Madhukar)
@@ -95,26 +72,29 @@
        - left side (various filter)   
        - Right side (All products)
 
-
+<img src="https://i.postimg.cc/yYbXtk1K/Screenshot-33.png" alt="product" />
 ---
 
 3. Single page : 👍 (Hari Singh)
    - All details about the particular products
-   - Show recommanded products
+   - Show recommanded product
+   
+   <img src="https://i.postimg.cc/fy7JMqXm/Screenshot-39.png" alt="singlepage" />
 
 4. Cart page : 👍 (Hari Singh)
    - All products that a registerd user added to his cart
-
+    <img src="https://i.postimg.cc/D0C3Qq3R/Screenshot-36.png" alt="cart" />
 
 ---
 
 5. Checkout page : 👍 (Shubham Verma)
     - Address of the user where products will be deliverd
+    <img src="https://i.postimg.cc/4yFN4CyK/Screenshot-40.png" alt="address" />
 
 6. Authentication Page : 👍 (Shubham Verma)
     - Sign up
     - login
-
+   <img src="https://i.postimg.cc/MZ4SGmtj/Screenshot-35.png" alt="login" />
 
  ---   
 
@@ -124,4 +104,4 @@
   - Can see all users who are registered
   - Can see all orders
   - Apply (Crud operation for products)
-
+ 
