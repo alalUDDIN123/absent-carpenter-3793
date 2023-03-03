@@ -2,19 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -47,11 +34,23 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
+
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size
+=======
+1. Landing page : 👍 (Ruchi Priya)
+    - navbar 
+    - nested navbar
+    - hero section
+    - products section 
+    - footer
+ <img src="https://i.postimg.cc/XNFbpyPH/Screenshot-34.png" alt="home" />
+---
+
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
 
 ### Making a Progressive Web App
 
@@ -62,9 +61,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
+=======
+<img src="https://i.postimg.cc/yYbXtk1K/Screenshot-33.png" alt="product" />
+---
+
+3. Single page : 👍 (Hari Singh)
+   - All details about the particular products
+   - Show recommanded product
+   
+   <img src="https://i.postimg.cc/fy7JMqXm/Screenshot-39.png" alt="singlepage" />
+
+4. Cart page : 👍 (Hari Singh)
+   - All products that a registerd user added to his cart
+    <img src="https://i.postimg.cc/D0C3Qq3R/Screenshot-36.png" alt="cart" />
+
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
 
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+5. Checkout page : 👍 (Shubham Verma)
+    - Address of the user where products will be deliverd
+    <img src="https://i.postimg.cc/4yFN4CyK/Screenshot-40.png" alt="address" />
+
+6. Authentication Page : 👍 (Shubham Verma)
+    - Sign up
+    - login
+   <img src="https://i.postimg.cc/MZ4SGmtj/Screenshot-35.png" alt="login" />
+
+ ---   
+
+## Below Are Admin page : (Alal Uddin)
+
+1. Landing page
+  - Can see all users who are registered
+  - Can see all orders
+  - Apply (Crud operation for products)
+ 
+
