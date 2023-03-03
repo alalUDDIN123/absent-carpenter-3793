@@ -1,13 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  position,
-  Toast,
+
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -44,7 +40,7 @@ export function Signup() {
   const dispatch = useDispatch();
   const [error, setError] = useState({});
 
-  const [errorMsg, setErrorMsg] = useState("");
+  // const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleChange = (e) => {

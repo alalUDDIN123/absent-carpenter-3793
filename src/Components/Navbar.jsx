@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Signup } from "../Pages/Authentication/Signup";
@@ -9,11 +9,6 @@ import {
   Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -37,6 +32,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
 import { useNavigate } from "react-router-dom";
 import logoPic from "./Masai-Kart.png"
+
 
 const initiaState = {
   password: "",
@@ -66,8 +62,9 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
-  const [change, setChange]  =  useState(true);
+  // const [change, setChange]  =  useState(true);
 
+  
   const [loginUserName, setLoginUserName] = useState("")
   
   const handleChange = (e) => {
@@ -266,23 +263,8 @@ export default function Navbar() {
 
 
           <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Box><HiOutlineShoppingCart size='2.2rem' color='white' /></Box>
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+            
+                <Box><HiOutlineShoppingCart  onClick={() => navigate("/cart")} size='2.2rem' color='white' /></Box>
           </Flex>
         </Flex>
 

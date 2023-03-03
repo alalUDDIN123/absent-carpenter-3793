@@ -1,63 +1,44 @@
-## Welcome to RCT211 Group Project
+# Getting Started with Create React App
 
- - Project Code : absent-carpenter-3793
- - IA : Manoj Attri
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](./Admin%20Panel%20Structure.png)
 
-### Let's have a meet with team members
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Alal Uddin 
-2. Shubham Verma
-3. Hari Singh Bisht
-4. Madhukar Kakade
-5. Ruchi Priya Kumari
----
+### `npm run build`
 
-## About Masai Cart
-<b>Masai cart is a e-commerce website where user can buy various types of products.
-</b>
-<br/>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Features of the site
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. Dynamic data 
-2. Filtering with various way
-3. Details of a particualr product
-4. Add to cart 
-5. Payments
-6. Admin Dashboard
-    - See All products
-    - Orders
-    - Selling
-    - Add product and user
-    - Modify or update either product or user
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<b> See live:</b> https://masai-kart.netlify.app/
- 
-## Folder Structure 📂
+### `npm run eject`
 
-- src 📂
-  - Components 📂
-     - CommonComponents.js
-     - Navbar.js
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-  - Pages 📂
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-     - AdminPage (Inside This Only `Alal Uddin Will` Work Here)   
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-     - Authentication (Inside This Only `Shubham Verma` Will Work Here)   
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-     - LandingPage (Inside This Only `Ruchi Priya` Will Work Here)   
+## Learn More
 
-     - Products (Inside This Only `Madhukar` Will Work Here)  
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-     - Single (Inside This Only `Hari Singh` Will Work Here)  
- 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Task Divided 👍👍👍👍👍
+### Code Splitting
 
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+=======
 1. Landing page : 👍 (Ruchi Priya)
     - navbar 
     - nested navbar
@@ -67,11 +48,20 @@
  <img src="https://i.postimg.cc/XNFbpyPH/Screenshot-34.png" alt="home" />
 ---
 
-2. Main products page : 👍 (Madhukar)
-   - Two section are here 
-       - left side (various filter)   
-       - Right side (All products)
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+=======
 <img src="https://i.postimg.cc/yYbXtk1K/Screenshot-33.png" alt="product" />
 ---
 
@@ -85,8 +75,14 @@
    - All products that a registerd user added to his cart
     <img src="https://i.postimg.cc/D0C3Qq3R/Screenshot-36.png" alt="cart" />
 
----
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
 5. Checkout page : 👍 (Shubham Verma)
     - Address of the user where products will be deliverd
     <img src="https://i.postimg.cc/4yFN4CyK/Screenshot-40.png" alt="address" />
@@ -105,3 +101,4 @@
   - Can see all orders
   - Apply (Crud operation for products)
  
+

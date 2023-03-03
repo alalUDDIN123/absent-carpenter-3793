@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import styles from "./Buybutton.module.css"
 
 export const Buybutton=({data})=>{
-    const navigate=useNavigate()
+    // const navigate=useNavigate()
 
     const handlego=()=>{
-        navigate("/delivery")
+        // navigate("/cart")
        }
     return(
         <div>

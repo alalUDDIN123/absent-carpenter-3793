@@ -16,10 +16,12 @@ import Footer from './Footer'
 import UserDetails from '../Pages/AdminPage/UserDetails'
 import OtpPgae from '../Pages/Authentication/OtpPage'
 import Delivery from '../Pages/Authentication/Delivery'
-
+// import { Authcontext } from '../Pages/Authentication/Context/AuthContext'
+ import PrivateRoutes from '../Pages/Authentication/Context/privateroute'
 
 
 function MainRoutes() {
+    // const {correct}=Authcontext()
     return (
         <>
             <Navbar />
