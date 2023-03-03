@@ -12,7 +12,19 @@
 5. Ruchi Priya Kumari
 
 ---
+## Credentials for login 💳💳💳
+```
+As admin 
+"password": "hari123",
+"email": "hari@gmail.com",
+
 ---
+
+As general user
+
+"email": "Ruchi@gmail.com",
+"password": "ruchi@&",
+```      
 1. Landing page : 👍 (Ruchi Priya)
     - navbar 
     - nested navbar
