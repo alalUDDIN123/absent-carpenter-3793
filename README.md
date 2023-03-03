@@ -62,7 +62,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 =======
-<img src="https://i.postimg.cc/yYbXtk1K/Screenshot-33.png" alt="product" />
 ---
 
 3. Single page : 👍 (Hari Singh)
