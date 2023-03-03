@@ -13,7 +13,7 @@ const Home = () => {
       image:
         "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100",
       text: "Top Offers",
-      href: "/offer"
+      href: "/phones"
     },
     {
       image:

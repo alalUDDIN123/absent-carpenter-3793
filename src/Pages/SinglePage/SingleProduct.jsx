@@ -1,7 +1,7 @@
 import styles from "./single.module.css"
 
-import React, { useContext, useEffect, useState } from 'react';
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Flex, Grid, GridItem, HStack, Img, Input, Skeleton, SkeletonCircle, SkeletonText, Stack, StylesProvider, Text, useMediaQuery } from '@chakra-ui/react'
+import React, {  useContext, useEffect } from 'react';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Flex, Grid, GridItem, HStack, Img, Input, Skeleton,  Stack,  Text, } from '@chakra-ui/react'
 import { FaHeart } from 'react-icons/fa';
 import { HiShoppingCart } from 'react-icons/hi'
 import { IoMdShareAlt } from 'react-icons/io'
@@ -9,17 +9,15 @@ import { MdRestartAlt } from 'react-icons/md'
 import { HiCurrencyRupee } from 'react-icons/hi'
 import { AiFillStar } from 'react-icons/ai'
 import { BsLightningCharge } from 'react-icons/bs'
-import ReactImageMagnify from 'react-image-magnify'
-
-import {  Link, useLocation, useParams } from 'react-router-dom';
-import style from "./scroll.module.css"
+import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductData } from '../../api';
 import { setSingleProduct } from '../../redux/ProductsReducer/action';
-import { addToCart } from "../../redux/CartReducer/action";
-import axios from "axios";
+import { CartContext } from "../Authentication/Context/cart";
 
 
+
+let arr=[]
 const SingleProduct = () => {
 const {singleProduct,isLoading,isError}=useSelector((store)=>store.ProductsManager)
 
@@ -29,50 +27,64 @@ const {
     images1,
     name,
     brand,
-    rating,
-    ratedCount,
-    review,
-    basicSpecification,
-    _customer_ratings,
     internal_storage,
     display,
-    screen_size,
     camera,
-    primary_camera,
-    secondary_camera,
     _battery_capacity,
-    processorSpecification,
     processor_brand,
-    speciality,
     network_type,
-    sim_type,
-    purchasePrice,
     discountPrice,
     sellPrice,
     _discount,
-    _diliveryMethod,
-    assured,
-    offer1,
-    offer2,
-    waranty,
-    diliveryBy,
-    topDiscount,
-    including,
-    dealers,
-    postedQuantity,
-    remainQuantity,
-    profit,
   } = singleProduct;
- 
+  const { SetCartData, carturl, getData } = useContext(CartContext)
 const dispatch =useDispatch()
 const location =useLocation()
 const route =location.pathname.replace("/products","")
+
+
+console.log(singleProduct)
+
 useEffect(()=>{ 
   dispatch(getProductData(route)) 
     .then((res)=>dispatch(setSingleProduct(res)))
 },[])
 
-  const [isLargerThan720] = useMediaQuery('(min-width: 720px)')
+ 
+// const addDatainCart = () => { // singleProduct[0]
+//     console.log(singleProduct[0], " check data ");
+
+//     fetch(`https://dbserver-one.vercel.app/Cart`, {
+//         method: "POST",
+//         body: JSON.stringify({ ...singleProduct[0] }),
+//         headers: {  
+//             "Content-Type": "application/json",
+//         },
+//     })
+//         .then((res) => res.json())
+//         .then((res) => {
+//             getData()
+//             console.log(" res in view page ", res);
+//         })
+// }
+
+const handleAddToCart = () => {
+    // addDatainCart()
+    arr.push(singleProduct)
+    localStorage.setItem("cart",JSON.stringify(arr))
+    console.log(" handleAddToCart ");
+}
+const handleBuyNow = () => {
+    // addDatainCart()
+    arr.push(singleProduct)
+    localStorage.setItem("cart",JSON.stringify(arr))
+    console.log(" Buy ");
+}
+
+
+
+
+
 
 
   if (isLoading) {
@@ -129,11 +141,7 @@ if (isError) {
     )
 }
 
-function adddata(){
-    const qty=1
-    dispatch(addToCart({...singleProduct,qty}))
-    console.log("ab")
-}
+
 
 
   return (
@@ -159,28 +167,8 @@ function adddata(){
                     </Box>
                     
                     <Box w="79%" p='10px' minH={'400px'} display='flex' justifyContent={'center'} alignItems={'center'} >
-                        <ReactImageMagnify {...{
-                            smallImage: {
-                                alt: 'flipkart clone project',
-                                isFluidWidth: true,
-                                src:`${image1}`,
-                               
-                            },
-                            largeImage: {
-                                src: `${image1}`,
-                                width: 1200,
-                                height: 1600,
-                              
-                            },
-                            enlargedImageContainerDimensions: {
-                                width: '400%',
-                                height: '170%',
-                                border: "1px solid blue",
-                                marginBottom:"100px"
-                            }
-                        }}
-                        />
-                        {/* <Img  maxH={{base:"500px",md:"300px", lg:"100%"}} mw='450px' m='auto' src={image1} /> */}
+                        
+                         <Img  maxH={{base:"500px",md:"300px", lg:"100%"}} mw='450px' m='auto' src={image1} />
                     </Box>
                     <Box p='15px' h='53px' bg="white" borderRadius={'50%'} marginLeft="1px" shadow={'base'}  > <FaHeart color="silver" size="25px" /> </Box>
                 </Box>
@@ -188,7 +176,7 @@ function adddata(){
 
                     <Button alignItems={"center"}
                         size='md'
-                         onClick={adddata}
+                         onClick={handleAddToCart}
                         height={{ base: '30px', md: '40px', lg: '55px' }}
                         width='45%'
                         bg="#FE9E00"
@@ -202,7 +190,7 @@ function adddata(){
                     <Link to='/cart'>
                         <Button
                             size='md'
-                            //  onClick={handleBuyNow}
+                             onClick={handleBuyNow}
                             height={{ base: '30px', md: '40px', lg: '55px' }}
                             width='45%'
                             bg="#FB641B"
@@ -226,6 +214,7 @@ function adddata(){
                         color={"black"}
                         fontSize="15px"
                         _hover={{ backgroundColor: "#ffff" }}
+                        onClick={handleBuyNow}
                     >
                         ADD TO CART
                     </Button><Button

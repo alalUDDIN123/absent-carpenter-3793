@@ -1,127 +1,70 @@
-## Welcome to RCT211 Group Project
+# Getting Started with Create React App
 
- - Project Code : absent-carpenter-3793
- - IA : Manoj Attri
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Dependencies Installed 
+## Available Scripts
 
-1. `npm i axios`
-2. `npm i react-router-dom`
-3. `npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion`
-4. `npm i @chakra-ui/icons`
-5. `npm install react-icons --save`
-6. `npm i json-server`
-7. `npm i redux react-redux redux-thunk`
-8. `npm install react-icons --save`
-9. `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
-10. `npm install @mui/icons-material`
-11. `npm install chart.js`
-12. `npm i react-chartjs-2`
-13. `npm install victory-pie --save`
-14. `npm i styled-components`
-15. `npm i react-slick`
-16. `npm i slick-carousel`
-17. `npm install react-image-magnify`
+In the project directory, you can run:
 
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-![](./Admin%20Panel%20Structure.png)
+### `npm test`
 
-### Let's have a meet with team members
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Alal Uddin 
-2. Shubham Verma
-3. Hari Singh Bisht
-4. Madhukar Kakade
-5. Ruchi Priya Kumari
----
+### `npm run build`
 
-## About Masai Cart
-<b>Masai cart is a e-commerce website where user can buy various types of products.
-</b>
-<br/>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Features of the site
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. Dynamic data 
-2. Filtering with various way
-3. Details of a particualr product
-4. Add to cart 
-5. Payments
-6. Admin Dashboard
-    - See All products
-    - Orders
-    - Selling
-    - Add product and user
-    - Modify or update either product or user
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<b> See live:</b> https://masai-kart.netlify.app/
- 
-## Folder Structure 📂
+### `npm run eject`
 
-- src 📂
-  - Components 📂
-     - CommonComponents.js
-     - Navbar.js
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-  - Pages 📂
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-     - AdminPage (Inside This Only `Alal Uddin Will` Work Here)   
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-     - Authentication (Inside This Only `Shubham Verma` Will Work Here)   
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-     - LandingPage (Inside This Only `Ruchi Priya` Will Work Here)   
+## Learn More
 
-     - Products (Inside This Only `Madhukar` Will Work Here)  
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-     - Single (Inside This Only `Hari Singh` Will Work Here)  
- 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Task Divided 👍👍👍👍👍
+### Code Splitting
 
-1. Landing page : 👍 (Ruchi Priya)
-    - navbar 
-    - nested navbar
-    - hero section
-    - products section 
-    - footer
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
----
+### Analyzing the Bundle Size
 
-2. Main products page : 👍 (Madhukar)
-   - Two section are here 
-       - left side (various filter)   
-       - Right side (All products)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-3. Single page : 👍 (Hari Singh)
-   - All details about the particular products
-   - Show recommanded products
+### Advanced Configuration
 
-4. Cart page : 👍 (Hari Singh)
-   - All products that a registerd user added to his cart
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-5. Checkout page : 👍 (Shubham Verma)
-    - Address of the user where products will be deliverd
+### `npm run build` fails to minify
 
-6. Authentication Page : 👍 (Shubham Verma)
-    - Sign up
-    - login
-
-
- ---   
-
-## Below Are Admin page : (Alal Uddin)
-
-1. Landing page
-  - Can see all users who are registered
-  - Can see all orders
-  - Apply (Crud operation for products)
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
