@@ -19,13 +19,14 @@ function Delivery() {
        
         const {value,  name } = e.target;
     setAddress({...address, [name] : value})
-   
+        
     }
-
-    const toOtp = () => {
+    let cart=JSON.parse(localStorage.getItem("cart"))
+    const toOtp = (i) => {
         if(address.Name != "" && address.Number != "" && address.Pincode != "" && address.Email != "" && address.Address != "" && address.City != "" && address.State != "" ){
            navigate("/otp")
-
+           cart.splice(i,1)
+           localStorage.setItem("cart",JSON.stringify(cart))
         } else {
             toast("Fill all details")
         }
