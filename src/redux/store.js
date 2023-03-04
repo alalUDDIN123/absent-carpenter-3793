@@ -1,6 +1,12 @@
-import { legacy_createStore } from "redux";
+import { applyMiddleware, combineReducers, compose, legacy_createStore } from "redux";
 import { userReducer } from "./AppReducer/adminReducer";
+import { reducer as ProductsManager } from "./ProductsReducer/reducer"
 
-const store=legacy_createStore(userReducer)
+import thunk from "redux-thunk";
 
-export default store;
+
+const composer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__||compose
+
+let rootReducer = combineReducers({ ProductsManager, userReducer })
+ const store = legacy_createStore(rootReducer, composer(applyMiddleware(thunk)));
+ export default store;

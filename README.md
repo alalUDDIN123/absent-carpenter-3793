@@ -2,29 +2,8 @@
 
  - Project Code : absent-carpenter-3793
  - IA : Manoj Attri
-
-## Dependencies Installed 
-
-1. `npm i axios`
-2. `npm i react-router-dom`
-3. `npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion`
-4. `npm i @chakra-ui/icons`
-5. `npm install react-icons --save`
-6. `npm i json-server`
-7. `npm i redux react-redux redux-thunk`
-8. `npm install react-icons --save`
-9. `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
-10. `npm install @mui/icons-material`
-11. `npm install chart.js`
-12. `npm i react-chartjs-2`
-
-
-
-## Day 2
-
-![](./Admin%20Panel%20Structure.png)
-
-### Let's have a meet with team members
+ 
+ ### Let's have a meet with team members
 
 1. Alal Uddin 
 2. Shubham Verma
@@ -32,62 +11,71 @@
 4. Madhukar Kakade
 5. Ruchi Priya Kumari
 
-## Folder Structure 📂
+---
+## Credentials for login 💳💳💳
+```
+As admin 
+"password": "hari123",
+"email": "hari@gmail.com",
 
-- src 📂
-  - Components 📂
-     - CommonComponents.js
-     - Navbar.js
+---
 
-  - Pages 📂
+As general user
 
-     - AdminPage (Inside This Only `Alal Uddin Will` Work Here)   
-
-     - Authentication (Inside This Only `Shubham Verma` Will Work Here)   
-
-     - LandingPage (Inside This Only `Ruchi Priya` Will Work Here)   
-
-     - Products (Inside This Only `Madhukar` Will Work Here)  
-
-     - Single (Inside This Only `Hari Singh` Will Work Here)  
- 
-
-## Task Divided 👍👍👍👍👍
-
+"email": "Ruchi@gmail.com",
+"password": "ruchi@&",
+```      
 1. Landing page : 👍 (Ruchi Priya)
     - navbar 
     - nested navbar
     - hero section
     - products section 
     - footer
-
+ <img src="https://i.postimg.cc/XNFbpyPH/Screenshot-34.png" alt="home" />
 ---
 
-2. Main products page : 👍 (Madhukar)
-   - Two section are here 
-       - left side (various filter)   
-       - Right side (All products)
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+=======
 ---
 
 3. Single page : 👍 (Hari Singh)
    - All details about the particular products
-   - Show recommanded products
+   - Show recommanded product
+   
+   <img src="https://i.postimg.cc/fy7JMqXm/Screenshot-39.png" alt="singlepage" />
 
 4. Cart page : 👍 (Hari Singh)
    - All products that a registerd user added to his cart
+    <img src="https://i.postimg.cc/D0C3Qq3R/Screenshot-36.png" alt="cart" />
 
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
 5. Checkout page : 👍 (Shubham Verma)
     - Address of the user where products will be deliverd
+    <img src="https://i.postimg.cc/4yFN4CyK/Screenshot-40.png" alt="address" />
 
 6. Authentication Page : 👍 (Shubham Verma)
     - Sign up
     - login
-
+   <img src="https://i.postimg.cc/MZ4SGmtj/Screenshot-35.png" alt="login" />
 
  ---   
 
@@ -96,5 +84,6 @@
 1. Landing page
   - Can see all users who are registered
   - Can see all orders
-  - Apply (Crud peration for products)
+  - Apply (Crud operation for products)
+ 
 

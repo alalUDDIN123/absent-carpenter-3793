@@ -1,0 +1,149 @@
+.main-cont {
+    width: 90%;
+    height: 80vh;
+    /* border: 2px solid yellow; */
+    box-shadow: 10px 10px 269px 95px rgba(199, 50, 199, 1);
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.main-cont>div:first-child {
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid yellow;
+}
+
+.heading {
+    margin: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+form>input {
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+
+}
+
+form textarea {
+    height: 110px;
+    width: 90%;
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #111;
+    border: 1px solid blue;
+    resize: none;
+    margin-bottom: 9px;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.sel {
+    width: 90%;
+    height: 30px;
+    margin: 10px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: black;
+    font-family: sans-serif;
+}
+
+
+.main-cont>div:last-child {
+    width: 50%;
+    height: 100%;
+    /* background-color: gray; */
+}
+
+
+.btnform {
+    width: 370px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-family: sans-serif;
+    border: 2px solid yellow;
+
+}
+
+.preview>h3 {
+    margin-left: 30px;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.preview>h3:nth-child(5) {
+    width: 90%;
+    height: 15vh;
+
+
+}
+
+.preview>h3:nth-child(5)>img {
+    width: 50%;
+    height: 100%;
+
+}
+
+
+/*  user details */
+
+.main-cont>div:first-child>img {
+    width: 50%;
+    height: 33vh;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.user-creden {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.user-creden>h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.user-creden>h2>span {
+    margin-left: 30px;
+    color: yellow;
+}
+
+.main-cont>div:last-child>h1 {
+    text-align: center;
+    margin: 10px 0px 65px 0px;
+    font-size: 25px;
+}
+
+.main-cont>div:last-child>h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.main-cont>div:last-child>h2>span {
+    margin-left: 30px;
+    color: yellow;
+}
+
