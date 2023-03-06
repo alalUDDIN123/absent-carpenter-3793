@@ -1,0 +1,32 @@
+.mainline{
+    width: 90%;
+    height: 20px;
+    /* border: 2px solid red; */
+    /* background-color: yellow; */
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    margin-top: 55px;
+}
+* a {
+    text-decoration: none;
+    color: black;
+}
+
+.mainline div{
+    margin-top: -1px;
+    text-align: center;
+}
+
+.catamainline{
+    cursor: pointer;
+}
+.catamainline div{
+    font-size: 14px;
+    font-weight: 600;
+}
+.catamainline:hover{
+    color: #2874f0;
+}

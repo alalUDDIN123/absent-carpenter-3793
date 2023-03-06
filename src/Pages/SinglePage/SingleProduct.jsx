@@ -1,78 +1,344 @@
-import React from 'react'
 import styles from "./single.module.css"
 
-import { Addbutton } from "./AddButton/Addbutton"
-import { Buybutton } from "./Buybutton/Buybutton"
-import {useDispatch} from "react-redux"
-import { useParams } from "react-router-dom"
-
-
-function SingleProduct() {
-
-  // const dispatch=useDispatch()
-
-  // const {id}=useParams()
-  
-
-
-
-
-
+import React, {  useContext, useEffect } from 'react';
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Flex, Grid, GridItem, HStack, Img, Input, Skeleton,  Stack,  Text, } from '@chakra-ui/react'
+import { FaHeart } from 'react-icons/fa';
+import { HiShoppingCart } from 'react-icons/hi'
+import { IoMdShareAlt } from 'react-icons/io'
+import { MdRestartAlt } from 'react-icons/md'
+import { HiCurrencyRupee } from 'react-icons/hi'
+import { AiFillStar } from 'react-icons/ai'
+import { BsLightningCharge } from 'react-icons/bs'
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductData } from '../../api';
+import { setSingleProduct } from '../../redux/ProductsReducer/action';
+import { CartContext } from "../Authentication/Context/cart";
 
 
 
+let arr=[]
+const SingleProduct = () => {
+const {singleProduct,isLoading,isError}=useSelector((store)=>store.ProductsManager)
+
+const {
+    id,
+    image1,
+    images1,
+    name,
+    brand,
+    internal_storage,
+    display,
+    camera,
+    _battery_capacity,
+    processor_brand,
+    network_type,
+    discountPrice,
+    sellPrice,
+    _discount,
+  } = singleProduct;
+  const { SetCartData, carturl, getData } = useContext(CartContext)
+const dispatch =useDispatch()
+const location =useLocation()
+const route =location.pathname.replace("/products","")
+
+
+console.log(singleProduct)
+
+useEffect(()=>{ 
+  dispatch(getProductData(route)) 
+    .then((res)=>dispatch(setSingleProduct(res)))
+},[])
+
+ 
+// const addDatainCart = () => { // singleProduct[0]
+//     console.log(singleProduct[0], " check data ");
+
+//     fetch(`https://dbserver-one.vercel.app/Cart`, {
+//         method: "POST",
+//         body: JSON.stringify({ ...singleProduct[0] }),
+//         headers: {  
+//             "Content-Type": "application/json",
+//         },
+//     })
+//         .then((res) => res.json())
+//         .then((res) => {
+//             getData()
+//             console.log(" res in view page ", res);
+//         })
+// }
+
+const handleAddToCart = () => {
+    // addDatainCart()
+    arr.push(singleProduct)
+    localStorage.setItem("cart",JSON.stringify(arr))
+    console.log(" handleAddToCart ");
+}
+const handleBuyNow = () => {
+    // addDatainCart()
+    arr.push(singleProduct)
+    localStorage.setItem("cart",JSON.stringify(arr))
+    console.log(" Buy ");
+}
+
+
+
+
+
+
+
+  if (isLoading) {
+    return (
+        <>
+        
+            <Stack>
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+                <Skeleton height='20px' />
+            </Stack>
+        </>
+    )
+}
+if (isError) {
+    return (
+        <><Alert
+        status='error'
+        variant='subtle'
+        flexDirection='column'
+        alignItems='center'
+        justifyContent='center'
+        textAlign='center'
+        height='500px'
+      >
+        <AlertIcon  boxSize='40px' mr={0} />
+        
+        <AlertTitle mt={4} mb={1} fontSize='lg'>
+       Opps!
+        </AlertTitle>
+        <AlertDescription maxWidth='2xl'>
+          Thanks for Your Patience. Please Refresh.
+        </AlertDescription>
+      </Alert>
+        </>
+    )
+}
 
 
 
 
   return (
+    <>
     <div>
-    <div>
-   <h1>single page</h1>
-     <div className={styles.onemain}>
-        <div className={styles.leftbox}>
-            <div className={styles.verticalline}>
-                
-            
-           <img className={styles.smallimg} src="data:image/jpeg;base64,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" alt=""  />
-              
-              
-            </div>
-                <div className={styles.imgdivbox}>
-                    <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/img-20220318-154432-1647606743.jpg" alt="" /><div className={styles.buttbox}>
-                    <Addbutton data="ADD TO CART" />
-                    <Buybutton data="BUY NOW"/>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div className={styles.rightbox}>
-
-            <div style={{color:"gray",fontSize:"12px"}}>home / Mobiles & Accessories / Mobiles</div>
-            <div>Mobile</div>
-            <div style={{color:"gray",fontSize:"15px"}}><span className={styles.ratetext}>rating <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" alt="" /></span> 4.487,421 Ratings & 5,244 Reviews <span><img style={{width:"70px"}} src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png" alt="" /></span></div>
-            <div className={styles.pricedivone}><span>price</span><span>₹ discountPrice</span><span>10%off</span></div>
-            <h5>Available offers</h5>
-            <div className={styles.offer}><span><img className={styles.offertag}  src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="" /></span><span className={styles.offerline}>Bank Offer 5% Cashback on Flipkart Axis Bank Card <span className={styles.tandc}>T&C</span></span></div>
-            <div className={styles.offer}><span><img className={styles.offertag}  src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="" /></span><span className={styles.offerline}>Special PriceExtra ₹4000 off(price inclusive of discount) <span className={styles.tandc}>T&C</span></span></div>
-            <div className={styles.offer}><span><img className={styles.offertag}  src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="" /></span><span className={styles.offerline}>Freebie CoinDCX Get Bitcoin Worth ₹201 <span className={styles.tandc}>T&C</span></span></div>
-            <div className={styles.offer}><span><img className={styles.offertag}  src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="" /></span><span className={styles.offerline}>Get Google Nest hub at just ₹4999 <span className={styles.tandc}>T&C</span></span></div>
-
-            <div></div>
-        </div>
-    </div>
+    <HStack p="10px" display={{ base: 'block', md: 'flex', lg: 'flex' }}>
+      
+               <Box key={id}  w={{ base: '100%', md: '40%', lg: '40%' }} h={{ base: "100h", md: "100h", lg: "100h" }} >
+                <Box display={"flex"} p="15px">
+                    <Box w="20%">
     
-      {/* : <img src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" alt="Loading..." />*/}
+                        <Box display={{ base: "none", md: 'block', lg: "block" }} h="90px" p='7px' border={"2px solid #2974F1"} m="auto" >
+                            <Img h="95%" m='auto' src={image1} alt="smallImg" />
+                        </Box>
+                        {
+                            images1?.map((img,i)=>(
+                                <Box key={500+i} display={{ base: "none", md: 'block', lg: "block" }} h="90px" p='7px' border={"2px solid #2974F1"} m="auto" >
+                                    <Img h="95%" m='auto' src={img} alt="smallImg" />
+                                </Box>       
+                            ))
+                        }
+                       
+                    </Box>
+                    
+                    <Box w="79%" p='10px' minH={'400px'} display='flex' justifyContent={'center'} alignItems={'center'} >
+                        
+                         <Img  maxH={{base:"500px",md:"300px", lg:"100%"}} mw='450px' m='auto' src={image1} />
+                    </Box>
+                    <Box p='15px' h='53px' bg="white" borderRadius={'50%'} marginLeft="1px" shadow={'base'}  > <FaHeart color="silver" size="25px" /> </Box>
+                </Box>
+                <Flex pt='30px' pl="30px" display={{ base: 'none', md: 'block', lg: 'block' }} alignContent={"center"} justifyContent="space-around" w="100%" m="auto" color={"white"}  >
 
-    </div>
-    </div>
+                    <Button alignItems={"center"}
+                        size='md'
+                         onClick={handleAddToCart}
+                        height={{ base: '30px', md: '40px', lg: '55px' }}
+                        width='45%'
+                        bg="#FE9E00"
+                        rounded='1px'
+                        fontSize={{ base: '10px', md: '13px', lg: '18px' }}
+                        _hover={{ backgroundColor: "#FE9E00" }}
+                        mr="5px"
+                    > <HiShoppingCart />
+                        ADD TO CART
+                    </Button>
+                    <Link to='/cart'>
+                        <Button
+                            size='md'
+                             onClick={handleBuyNow}
+                            height={{ base: '30px', md: '40px', lg: '55px' }}
+                            width='45%'
+                            bg="#FB641B"
+                            rounded='1px'
+                            fontSize={{ base: '10px', md: '13px', lg: '18px' }}
+                            _hover={{ backgroundColor: "#FB641B" }}
+                        >
+                            <BsLightningCharge />
+                            BUY NOW
+                        </Button>
+                    </Link>
+                </Flex>
+
+                <Flex zIndex={100} display={{ base: 'block', md: 'none', lg: 'none' }} position={"fixed"} bottom="0" alignContent={"center"} justifyContent="space-around" w="100%" m="auto" color={"white"} bg="white">
+                    <Button alignItems={"center"}
+                        size='md'
+                        height="50px"
+                        width='48%'
+                        bg="white"
+                        rounded='1px'
+                        color={"black"}
+                        fontSize="15px"
+                        _hover={{ backgroundColor: "#ffff" }}
+                        onClick={handleBuyNow}
+                    >
+                        ADD TO CART
+                    </Button><Button
+                        size='md'
+                        height="50px"
+                        width='48%'
+                        bg="#FB641B"
+                        rounded='1px'
+                        fontSize="15px"
+                        _hover={{ backgroundColor: "#FB641B" }}
+                    >
+
+                        BUY NOW
+                    </Button>
+                </Flex>
+            </Box>
+
+                   
+            <Box key={id}  w={{ base: '100%', md: '60%', lg: '60%' }} pt="-50px" h="100vh" overflow={{ base: "auto", md: "auto", lg: "auto" }} pl="2%" className={styles.exmaple}>
+                <Box display={{ base: "none", md: "block", lg: "block" }} > <Text p="15px" display="flex" alignItems="center" float="right"> <IoMdShareAlt /> Share</Text></Box>
+                <Box> <Text color={"silver"} > {brand} </Text></Box>
+                <Text fontWeight={"500"}> {name}</Text>
+                <Text fontSize={"12px"} color="green"> Special price</Text>
+                <Box display={"flex"} alignItems="center" fontWeight={"500"} fontSize={"12px"}> <Text fontSize={"25px"} pr="10px"> ₹{discountPrice} </Text>  <Text pr="10px">  <del> ₹{sellPrice} </del> </Text>  <Text pr="10px" color="green"> {_discount}% Off</Text></Box>
+                <Box fontSize={{ base: '10px', md: '11px', lg: '15px' }} fontWeight={"500"} mb="15px" color={"#868786"} mt="8px" display="flex" alignItems="center" > <Box bg="green" color={"white"} pl="5px" pr="5px" display="flex" alignItems="center" borderRadius={"25px"} > 4.5 <AiFillStar /></Box>
+                    <Text pl="12px" pr="6px"> ratings</Text> and <Text pl="6px" pr="12px"> review</Text>
+                    <Img w="60px" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="logo" />
+                </Box>
+
+                <Text> Copons for you</Text>
+                <Box display={"flex"} mb="5px" mt="5px" alignItems="center" fontSize={{ base: '8px', md: '10px', lg: '15px' }}> <Img w="18px" mr="5px" src="https://rukminim1.flixcart.com/www/36/36/promos/30/07/2019/79f48e86-8a93-46ab-b45a-5a12df491941.png?q=90" alt="small" /> Special Price₹100 off with cashback coupon on First Order <Text color={"#2974F1"} pl="5px">T&C </Text></Box>
+
+                <Text> Available offers</Text>
+                <Box fontSize={{ base: '8px', md: '10px', lg: '15px' }} mt="10px" mb="5px" display="flex" alignItems="center" >  <Img w="18px" mr="5px" src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="small copoun" />Special PriceGet extra 22% off (price inclusive of cashback/coupon) <Text color={"#2974F1"} pl="5px"> T&C</Text> </Box>
+                <Box fontSize={{ base: '8px', md: '10px', lg: '15px' }} display={"flex"} mb="5px" alignItems="center" > <Img w="18px" mr="5px" src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="small copoun" />Combo OfferBuy 2 items save 5%; Buy 3 or more save 10% <Text color={"#2974F1"} pl="10px"> See all productsT&C</Text> </Box>
+                <Box fontSize={{ base: '8px', md: '10px', lg: '15px' }} display={"flex"} mb="5px" alignItems="center"> <Img w="18px" mr="5px" src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" alt="small copoun" /> Bank OfferTest - 10% off on HDFC Bank Cardless EMI, up to ₹500. On orders of ₹3000 and above</Box>
+                <br />
+                <br />
+                <Flex display={"flex"} justifyContent={"space-between"} fontSize={{ base: '8px', md: '10px', lg: '15px' }}>
+                    <Box>
+                        <Box display={"flex"} mb="15px" alignItems="center"> <Img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" alt="" />
+                            <Text> Deliver to</Text>
+                        </Box>
+                        <Box display="flex" alignItems={"center"} borderBottom="1px solid #2974F1"> <Input fontSize={{ base: '8px', md: '12px', lg: '15px' }} zIndex={"-1"} variant='unstyled' placeholder='Enter Delivery pincode' type="text" /> Check </Box>
+                    </Box>
+                    <Box>
+                        <Text display={"flex"} mb="15px" alignItems="center"> <MdRestartAlt size="15px" color='#2974F1' /> 10 Days Return Policy</Text>
+                        <Text display={"flex"} alignItems="center"> <HiCurrencyRupee size="15px" color='#2974F1' /> Cash on Delivery available</Text>
+                    </Box>
+                </Flex>
+                <Box pt="20px" fontSize={"12px"}>  <Text>  Usually delivered in8 days</Text>
+                    <Text>  Enter pincode for exact delivery dates/charges</Text>
+                </Box>
+                <Text color='#2974F1' pt={"10px"} fontSize={{ base: '8px', md: '10px', lg: '15px' }}> View Details</Text>
+                <Flex display={"flex"} width={{ base: '50%', md: '60%', lg: '30%' }} justifyContent="space-between" pt="10px" fontSize={"12px"}>
+
+                    <Box>
+                        Seller
+                    </Box>
+                    <Box>
+                        <Box display={"flex"} alignItems="center">
+                            RetailNet
+                            <Flex ml="5px" bg='#2974F1' w="35px" color={"white"} alignItems="center" pr="5px" display="flex" pl="5px" borderRadius={"25px"} fontSize="11px"> hidden_stars <AiFillStar /></Flex>
+                        </Box>
+
+
+                        <Text>10 Days Return Policy </Text>
+                        <Text> GST invoice available</Text>
+                    </Box>
+                </Flex>
+
+                <Img w={{ base: '200px', md: '280px', lg: '400px' }} p="20px" src="https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50" />
+                <Accordion defaultIndex={[0]} allowMultiple w="100%" p="0px" ml="-9px">
+
+
+                    <AccordionItem bg="white">
+                        <h1>
+                            <AccordionButton bg="white" pt={{ base: '15px', md: '20px', lg: '25px' }} pb={{ base: '15px', md: '20px', lg: '25px' }}>
+                                <Box flex='1' textAlign='left' fontSize={"20px"} >
+                                    Product Details
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                        </h1>
+                        <AccordionPanel pb={4}>
+                            <Grid templateColumns='repeat(2, 1fr)' gap={5} fontSize="12px" w="53%" >
+
+                                <GridItem> Display</GridItem>
+                                <GridItem>{display}</GridItem>
+                                <GridItem> Internal Storage </GridItem>
+                                <GridItem> {internal_storage} </GridItem>
+                                <GridItem>  Processor</GridItem>
+                                <GridItem> {processor_brand} </GridItem>
+                                <GridItem>  Camera</GridItem>
+                                <GridItem>  {camera}|</GridItem>
+                                <GridItem> Network Type</GridItem>
+                                <GridItem> {network_type}</GridItem>
+                                <GridItem>  Battery Capacity</GridItem>
+                                <GridItem> {_battery_capacity}</GridItem>
+
+                            </Grid>
+                        </AccordionPanel>
+                    </AccordionItem>
+                </Accordion>
+
+                <Flex alignItems="center" justifyContent={"space-between"} pt="10px" pb="50px">
+                    <Box fontSize={{ base: '8px', md: '15px', lg: '25px' }}>
+                        <Text fontWeight={"500"}>  Ratings & Reviews</Text>
+                    </Box>
+                    <Box fontSize={{ base: '10px', md: '11px', lg: '15px' }} mb="15px" color={"#868786"} mt="8px" display="flex" alignItems="center" > <Box bg="green" color={"white"} pl="5px" pr="5px" display="flex" alignItems="center" borderRadius={"25px"} >4.5<AiFillStar /></Box>
+                        <Text pl="2px" pr="2px"> ratings</Text> <Text> and </Text> <Text pl="2px" pr="2px">reviews</Text>
+                    </Box>
+                    <Box>
+                        <Button bg='#2974F1' color={"white"} pos=''
+                            fontSize={{ base: '8px', md: '11px', lg: '15px' }} h={{ base: '18px', md: '30px', lg: '40px' }} _hover={{ bg: "#2974F1" }}>
+                            Rate Product</Button>
+                    </Box>
+                </Flex>
+            </Box>
+      
+    </HStack>
+</div>
+    </>
   )
-  }
+}
 
 export default SingleProduct
-
-
-// price:'₹{Math.round(initdata.price-(initdata.price*10/100).toFixed(0))}'
