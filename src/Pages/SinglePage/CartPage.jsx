@@ -176,8 +176,8 @@ console.log(cartData)
     useEffect(() => {
     //   window.scrollTo(0, 0)
     //   getData()
-   
-
+      let hari=count*cartData.sellPrice
+      console.log(hari)
      }, [count]);
   
     // console.log(cartData);
@@ -502,7 +502,7 @@ console.log(cartData)
             < Box display='flex'justifyContent='flex-start' alignItems='center'  bg='white' >
               <Text ml='5' mt='5' fontWeight='400' fontSize='18px' color='black' >Price ({cartData.length} items) </Text>
               <Spacer/>
-              <Text mr='5' mt='5' fontWeight='400' fontSize='18px' color='black' >₹ {data.sellPrice}</Text>
+              <Text mr='5' mt='5' fontWeight='400' fontSize='18px' color='black' >₹ {((data.sellPrice))}</Text>
             </Box>
             < Box display='flex'justifyContent='flex-start' alignItems='center'  bg='white' >
               <Text ml='5' mt='4' fontWeight='400' fontSize='18px' color='black' >Discount </Text>

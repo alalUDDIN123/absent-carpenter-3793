@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Signup } from "../Pages/Authentication/Signup";
+import { IoSearchSharp } from "react-icons/io5";
 import {
   Box,
   Flex,
@@ -30,8 +31,9 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from "../redux/AppReducer/action";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logoPic from "./Masai-Kart.png"
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 
 const initiaState = {
@@ -40,7 +42,7 @@ const initiaState = {
 }
 
 const Links = ["Login", "Become A Seller", "More"];
-const NavLink = ({ children }) => (
+const NavLinks = ({ children }) => (
   <Link
     px={2}
     py={1}
@@ -56,6 +58,17 @@ const NavLink = ({ children }) => (
 );
 
 export default function Navbar() {
+  const {singleProduct,isLoading,isError}=useSelector((store)=>store.ProductsManager)
+
+  // const {
+  //     id,
+   
+  //   } = singleProduct;
+  //   const location = useLocation();
+
+  //   const route = location.pathname.replace("/products", "");
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [state, setState] = useState(initiaState)
   const user = useSelector(store => store.userReducer.users)
@@ -63,10 +76,14 @@ export default function Navbar() {
   const [adminAccess,setAdminAccess]=useState(false)
   const dispatch = useDispatch()
   // const [change, setChange]  =  useState(true);
-
-  
+  const [data, setData] = useState([])
+  const [searchVal, setSearchVal] = useState("");
   const [loginUserName, setLoginUserName] = useState("")
-  
+  const btnRef = React.useRef();
+  const ref = useRef(null)
+  const [hiddenDiv, setHiddenDiv] = useState(false)
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value })
@@ -104,6 +121,48 @@ export default function Navbar() {
 
   // console.log(user)
   // console.log(adminAccess)
+  const url = `https://dbserver-one.vercel.app/phones`
+  
+  useEffect(()=>{
+    fetchData(searchVal)
+  },[searchVal])
+  
+
+  const fetchData=(searchVal)=>{
+    fetch(`${url}?_limit=5&q=${searchVal}`)
+    .then((res)=>res.json())
+    .then((res)=>{
+      // setData(res)
+      setData(res)
+      console.log(res, " search input data after fetched ");
+    })
+  }
+
+  const debounce = (fn, timeout)=>{
+    let timerid;
+    return ()=>{
+      clearTimeout(timerid)
+      timerid = setTimeout(() => {
+        fn()
+      }, timeout);
+    }
+  }
+  const handleinput = debounce(()=>{
+    const val = ref.current.value
+    console.log(" event val check in debounce ", val);
+    setHiddenDiv(true)
+    setSearchVal(val)
+  }, 500)
+
+  window.addEventListener("click",(e)=>{
+    console.log(e.target.id, " check window ");
+    if(e.target.id!=="inputBox"){
+      setHiddenDiv(false)
+    }
+  })
+
+
+
 
   return (
     <>
@@ -131,21 +190,80 @@ export default function Navbar() {
               />
             </HStack>
             <ToastContainer />
-            <Box display={{ base: "none", md: "none", lg: "block" }}>
-              <InputGroup boxShadow={"md"} backgroundColor="white">
-                <InputRightElement
-                  pointerEvents="none"
-                  children={<SearchIcon color="blue.500" />}
-                />
+        
+              <Box w="270px" pos={'relative'}>
+              <InputGroup>
                 <Input
-                  borderRadius={0}
-                  borderColor="gray.300"
-                  w="500px"
-                  type="search"
-                  placeholder="Search Here ..."
+                  placeholder="Search for products,brands and more"
+                  bg="white"
+                  w="100%"
+                  borderRadius="2px"
+                  h="36px"
+                  fontSize="14px"
+                  ref={ref}
+                  // value={}
+                  onInput={handleinput}
+                  id='inputBox'
+                />
+                <InputRightElement
+                pos='absolute' zIndex='10'
+                  children={
+                    <IoSearchSharp
+                      color="#2874f0"
+                      cursor="pointer"
+                      fontSize="23px"
+                      fontWeight="bold"
+                    />
+                  }
                 />
               </InputGroup>
+              <Box
+                display={hiddenDiv?"":"none"}
+                pos={'absolute'} zIndex={'10'}
+                maxH='320px' overflowY={'auto'}
+                borderRadius='0 0 2px 2px'
+                borderTop={'1px solid #e0e0e0'}
+                w='100%'
+                bg='#fff'
+                boxShadow={'2px 3px 5px -1px rgb(0 0 0 / 50%)'}
+              >
+                {
+                  data.map((item, index)=>(
+                    <Box key={index}>
+                      <NavLink to={`/products/phones/${item.id}`}>
+                        <Flex gap={2} p='10px 25px' m='10px 0'
+                        align={'center'}
+                        cursor='pointer'
+                        _hover={{bg:"#F5F8FF"}}
+                        // onClick={()=>handleSetQuaryUrl(item.query_url)}
+                        >
+                          <Box maxH='32px' w='32px'>
+                            <Image maxH='30px' maxW='32px' src=
+                            {item.image1}
+                            // {item.thumbnail}
+                            />
+                          </Box>
+                          <Box color={'#212121'}
+                          >
+                            {item.name}
+                            {/* {item.name} */}
+                          </Box>
+                        </Flex>
+                      </NavLink>
+                    </Box>
+                  ))
+                }
+              </Box>
             </Box>
+
+
+
+
+
+
+
+
+
             <HStack
               as={"nav"}
               spacing={8}
@@ -274,7 +392,7 @@ export default function Navbar() {
 
               {Links.map((link) => (
 
-                <NavLink key={link}>{link}</NavLink>
+                <NavLinks key={link}>{link}</NavLinks>
               ))}
             </Stack>
           </Box>

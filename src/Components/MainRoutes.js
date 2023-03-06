@@ -8,11 +8,11 @@ import Home from '../Pages/LandingPage/Home'
 import Products from '../Pages/Products/Products'
 import CartPage from '../Pages/SinglePage/CartPage'
 import SingleProduct from '../Pages/SinglePage/SingleProduct'
-import Navbar from './Navbar'
+
 import NotFound from './NotFound'
 import Orders from '../Pages/AdminPage/Orders'
 import AddProduct from '../Pages/AdminPage/AddProduct'
-import Footer from './Footer'
+
 import UserDetails from '../Pages/AdminPage/UserDetails'
 import OtpPgae from '../Pages/Authentication/OtpPage'
 import Delivery from '../Pages/Authentication/Delivery'
@@ -21,14 +21,14 @@ import Delivery from '../Pages/Authentication/Delivery'
 
 
 function MainRoutes() {
-    // const {correct}=Authcontext()
+    
     return (
         <>
-            <Navbar />
+           
             <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route path='/products/:key' element={<Products />}></Route>
-                <Route path='/products/:key/:id' element={<SingleProduct />}></Route>
+                <Route path='/products/phones/:id' element={<SingleProduct />}></Route>
                 <Route path='/cart' element={<CartPage />}></Route>
                 <Route path='/delivery' element={<Delivery />}></Route>
                 <Route path='/otp' element={<OtpPgae />}></Route>
@@ -41,7 +41,7 @@ function MainRoutes() {
                 <Route path='/admin/addProduct' element={<AddProduct />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
             </Routes>
-            <Footer />
+            
         </>
     )
 }
