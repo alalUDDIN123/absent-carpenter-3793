@@ -11,6 +11,7 @@
 4. Madhukar Kakade
 5. Ruchi Priya Kumari
 
+### Deployed link : https://masaikart-hemuu12.vercel.app/
 ---
 ## Credentials for login 💳💳💳
 ```
